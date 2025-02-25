@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London</title>
+    <link rel="stylesheet" href="./destination.css">
+</head>
+<body>
+      <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+</div>
+<!--loader end-->
+    <!--navbar start-->
+    <header class="header">
+        <div class="nav-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a class="header-link" href="../bolg.html"   style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="header-link" href="#">Services <i class="fas fa-chevron-down"
+                                    style="font-size: 1rem;"></i></a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+                                  </ul>
+                              </li>
+                              <li><a class="header-link" href="../About.html">About</a></li>
+                              <li><a class="header-link" href="../Contact.html">Contact</a></li>
+                          </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+  <!--navbar end-->
+  <!-- London start -->
+<div class="hero-image">
+    <img class="main-img" src="../assest/london.jpeg"  style="height: 70vh;">
+</div>
+<div class="heading">London</div>
+<div class="content">
+
+    <h2  class="scroll-reveal">About London</h2>
+    <p class="scroll-reveal">
+        London, the capital of the United Kingdom, is a vibrant and diverse city that blends history with modernity. Known for its iconic landmarks, world-class museums, and rich cultural heritage, London attracts millions of visitors each year. From the historic Tower of London to the bustling West End, the city offers something for everyone, whether you're a history buff, art lover, or shopaholic.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+        <li><strong>Big Ben and the Houses of Parliament</strong> - A must-see landmark, with the famous clock tower and beautiful architecture.</li>
+        <li><strong>The British Museum</strong> - Home to one of the world's most extensive collections of art and antiquities from ancient civilizations.</li>
+        <li><strong>London Eye</strong> - A giant Ferris wheel offering panoramic views of London from the South Bank of the River Thames.</li>
+        <li><strong>Tower of London</strong> - A historic castle and former royal residence, known for housing the Crown Jewels.</li>
+        <li><strong>The Shard</strong> - A modern skyscraper offering stunning views of the city from its observation deck.</li>
+        <li><strong>Hyde Park</strong> - One of London’s largest and most famous parks, perfect for a relaxing stroll or a boat ride on the Serpentine lake.</li>
+        <li><strong>Covent Garden</strong> - A lively area known for street performers, boutique shops, and excellent dining options.</li>
+    </ul>
+
+    <img class="image scroll-reveal" src="../assest/london2.jpeg"  alt="London View" class="full-width-image">
+
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+        Discover the best of London with our expertly crafted travel itineraries. Whether you're looking to explore the city's rich history, enjoy the theater district, or indulge in high-end shopping, we offer customized packages that suit your travel needs. With VIP access to top attractions and expert guides, your London experience will be unforgettable.
+    </p>
+
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+        London can be visited year-round, but the best times are during spring (March to May) and fall (September to November), when the weather is mild and the crowds are smaller. Summer (June to August) is the peak tourist season, and while the weather is warmer, it can be crowded. Winter (December to February) is ideal for those who prefer fewer tourists and a festive atmosphere during the holiday season.
+    </p>
+
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+        London is known for its multicultural atmosphere, reflected in its food scene. Try iconic British dishes like <em>fish and chips</em>, <em>roast beef</em>, and <em>shepherd’s pie</em>, as well as international cuisine from around the world. Don’t miss the classic afternoon tea experience, complete with scones and finger sandwiches. The city also offers a vibrant arts and theater scene, with the famous West End for world-class shows.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+        - Use an Oyster card or contactless payment for easy access to public transport, including buses and the Underground.<br>
+        - Be prepared for rainy weather—pack an umbrella and waterproof shoes.<br>
+        - Avoid taking taxis during peak hours, as traffic can be heavy. Consider using the Tube or walking for faster travel.<br>
+        - London is a walkable city, so be sure to wear comfortable shoes for exploring its neighborhoods.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+        <input type="date" id="travelDate" placeholder="Select your travel date">
+        <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+        <a href="../services/ticket.html">Plan Your Trip to London Now</a>
+    </div>
+</div>
+
+<!-- End -->
+
+    <!--Footer Start-->
+    <footer>
+        <div class="footer-container">
+          <div class="row">
+            <div class="footer-container-col">
+              <h4>About Us</h4>
+              <ul style="width: 300px;">
+                <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+                  preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+                  journey. Let us handle the details for you, making every trip unforgettable.</p>
+              </ul>
+            </div>
+    
+            <div class="footer-container-col">
+              <h4>Quik Links</h4>
+              <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../bolg.html">Blogs</a></li>
+                <li><a href="../About.html">About Us</a></li>
+                <li><a href="../Contact.html">Contact Us</a></li>
+           
+              </ul>
+            </div>
+    
+            <div class="footer-container-col">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="../services/hotel.html">Hotel Booking</a></li>
+                <li><a href="../services/ticket.html">Ticket Booking</a></li>
+                <li><a href="../services/Train.html">Train Booking</a></li>
+                <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+    
+              </ul>
+            </div>
+      
+            <div class="footer-container-col">
+              <h4>Contact Us</h4>
+              <ul>
+                <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+                                <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+                </li>
+    
+    
+              </ul>
+            </div>
+            <div class="footer-container-col">
+              <h4>Newsletter</h4>
+              <form action="">
+                <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+                <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+                <input type="submit" value="Submit" class="inputSubmit">
+              </form>
+            </div>
+          </div>
+          <hr style="margin-top: 30px;">
+          <div class="row">
+            <div class="col">
+              <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+            </div>
+            <div class="socialIcons">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--footer end-->
+      <script>
+        //toogle js code start
+const navToggler = document.querySelector(".nav-toggler");
+navToggler.addEventListener("click", navToggle);
+
+function navToggle() {
+navToggler.classList.toggle("active");
+const nav = document.querySelector(".nav");
+nav.classList.toggle("open");
+if(nav.classList.contains("open")){
+    nav.style.maxHeight = nav.scrollHeight + "px";
+}
+else{
+    nav.removeAttribute("style");
+}
+} 
+//toogle js code end
+        function checkAvailability() {
+            const dateInput = document.getElementById("travelDate");
+            const selectedDate = dateInput.value;
+            
+            if (selectedDate) {
+                dateInput.disabled = true;
+    
+                alert(`You selected: ${selectedDate}. Availability has been checked!`);
+            } else {
+                alert("Please select a date.");
+            }
+        }
+           //loader js
+    window.addEventListener('load', function() {
+    const loader = document.querySelector('.loader');
+    loader.classList.add('fade-out');
+});
+
+
+//Overall animation start
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+    });
+});
+window.dispatchEvent(new Event("scroll"));
+
+    </script>
+
+</body>
+</html>

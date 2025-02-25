@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaghan Valley</title>
+    <link rel="stylesheet" href="./destination.css">
+</head>
+<body>
+      <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+</div>
+<!--loader end-->
+    <!--navbar start-->
+    <header class="header">
+        <div class="nav-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a class="header-link" href="../bolg.html"    style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="header-link" href="#">Services <i class="fas fa-chevron-down"
+                                    style="font-size: 1rem;"></i></a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+                                  </ul>
+                              </li>
+                              <li><a class="header-link" href="../About.html">About</a></li>
+                              <li><a class="header-link" href="../Contact.html">Contact</a></li>
+                          </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+  <!--navbar end-->
+
+  <!-- Kaghan Valley Start -->
+<div class="hero-image">
+    <img class="main-img" src="../assest/Kaghan Valley.jpg" alt="Kaghan Valley Scenery" style="height: 70vh;">
+</div>
+<div class="heading">Kaghan Valley</div>
+<div class="content">
+
+    <h2 class="scroll-reveal">About Kaghan Valley</h2>
+    <p class="scroll-reveal">
+        Kaghan Valley is a beautiful and serene destination located in the Mansehra District of Khyber Pakhtunkhwa, Pakistan. Known for its lush green meadows, crystal-clear rivers, snow-capped mountains, and charming villages, Kaghan Valley is a perfect getaway for nature lovers and adventure enthusiasts. With a blend of rich culture and natural beauty, it’s one of Pakistan’s most visited tourist destinations.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+        <li><strong>Naran</strong> - The most popular town in Kaghan Valley, surrounded by majestic mountains and lush greenery. It’s a great base for exploring the valley.</li>
+        <li><strong>Lake Saif ul Malook</strong> - A breathtaking alpine glacial lake, famous for its crystal-clear waters and the surrounding peaks, making it a must-visit destination in the valley.</li>
+        <li><strong>Babusar Pass</strong> - The highest point in Kaghan Valley, offering panoramic views of the surrounding mountains and valleys. It is accessible during the summer months and provides access to Gilgit-Baltistan.</li>
+        <li><strong>Sharan Forest</strong> - A tranquil forest area located at the foot of snow-covered peaks, ideal for camping and hiking enthusiasts.</li>
+        <li><strong>Lulusar Lake</strong> - A scenic lake located near Babusar Pass, surrounded by mountains and offering peaceful surroundings for nature lovers.</li>
+        <li><strong>Balakot</strong> - A charming town located at the entry point to Kaghan Valley, known for its green fields and pleasant weather.</li>
+        <li><strong>Jalkhad</strong> - A serene village known for its clear streams, alpine meadows, and beautiful surroundings, perfect for peaceful retreats.</li>
+    </ul>
+
+ 
+    <img class="image scroll-reveal" src="../assest/kaghan2.jpg" alt="Kaghan Valley Views" class="full-width-image">
+
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+        Kaghan Valley offers an incredible mix of adventure and relaxation, and our travel packages ensure you experience the best of it. From exploring alpine lakes to hiking in lush meadows, our personalized itineraries are designed to help you immerse yourself in the beauty of this region. Whether you seek a relaxing getaway or an adventurous trek, we’ve got you covered.
+    </p>
+
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+        The best time to visit Kaghan Valley is during the summer months (May to September), when the weather is mild and ideal for outdoor activities like trekking, fishing, and boating. The winter months (December to February) are extremely cold, and many areas, including Saif ul Malook and Babusar Pass, become inaccessible due to snow.
+    </p>
+
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+        Kaghan Valley is home to a diverse population, with locals following traditional customs and lifestyles. The local cuisine includes delicious dishes such as <em>chapli kebabs</em>, <em>roti</em>, and <em>peshawari naan</em>, often enjoyed with fresh yogurt and herbal tea. The hospitality of the locals is unmatched, and visitors are always welcomed with open arms.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+        - Pack warm clothing even in the summer, as temperatures can drop significantly at higher altitudes.<br>
+        - The roads in the valley can be narrow and winding, so make sure your vehicle is suitable for mountain terrain.<br>
+        - Carry cash as ATMs may not be available in remote areas.<br>
+        - Keep a first aid kit and any necessary medications for high-altitude travel.<br>
+        - Respect local traditions and customs, especially when visiting remote villages.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+        <input type="date" id="travelDate" placeholder="Select your travel date">
+        <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+      <a href="../services/ticket.html">Plan Your Trip to Kaghan Now</a>
+    </div>
+</div>
+<!-- Kaghan Valley End -->
+
+
+
+
+      <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+       
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+
+    
+
+        <script>
+            //toogle js code start
+ const navToggler = document.querySelector(".nav-toggler");
+ navToggler.addEventListener("click", navToggle);
+
+ function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+    	nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+    	nav.removeAttribute("style");
+    }
+ } 
+//toogle js code end
+            function checkAvailability() {
+                const dateInput = document.getElementById("travelDate");
+                const selectedDate = dateInput.value;
+                
+                if (selectedDate) {
+                    dateInput.disabled = true;
+        
+                    alert(`You selected: ${selectedDate}. Availability has been checked!`);
+                } else {
+                    alert("Please select a date.");
+                }
+            }
+
+
+               //loader js
+    window.addEventListener('load', function() {
+    const loader = document.querySelector('.loader');
+    loader.classList.add('fade-out');
+});
+
+
+
+//Overall animation start
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+    });
+});
+window.dispatchEvent(new Event("scroll"));
+
+        </script>
+
+</body>
+
+
+</html>

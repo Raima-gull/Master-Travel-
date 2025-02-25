@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunza Valley</title>
+    <link rel="stylesheet" href="./destination.css">
+</head>
+
+<body>
+  <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+</div>
+<!--loader end-->
+    <!--navbar start-->
+    <header class="header">
+        <div class="nav-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a class="header-link" href="../bolg.html"    style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="header-link" href="#">Services <i class="fas fa-chevron-down"
+                                    style="font-size: 1rem;"></i></a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+                                  </ul>
+                              </li>
+                              <li><a class="header-link" href="../About.html">About</a></li>
+                              <li><a class="header-link" href="../Contact.html">Contact</a></li>
+                          </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--navbar end-->
+
+  <!-- Hunza Valley Start -->
+<div class="hero-image">
+    <img class="main-img" src="../assest/Hunza Valley.jpg" alt="Hunza Valley Scenery" style="height: 70vh;">
+</div>
+<div class="heading">Hunza Valley</div>
+<div class="content">
+
+    <h2 class="scroll-reveal">About Hunza Valley</h2>
+    <p class="scroll-reveal">
+        Nestled in the northern part of Pakistan, Hunza Valley is a breathtakingly beautiful destination known for its stunning landscapes, towering peaks, and charming villages. Surrounded by the majestic Karakoram Range, Hunza offers a peaceful escape with its picturesque valleys, crystal-clear rivers, and rich cultural heritage. It's a place where nature, adventure, and tradition harmoniously come together.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+        <li><strong>Karimabad</strong> - The main town in Hunza, famous for its historical forts, like Baltit Fort and Altit Fort, and the stunning views of Rakaposhi Peak.</li>
+        <li><strong>Rakaposhi View Point</strong> - A must-visit location to witness the towering beauty of Rakaposhi, the 27th highest mountain in the world.</li>
+        <li><strong>Husseini Suspension Bridge</strong> - One of the most dangerous suspension bridges in the world, offering a thrilling adventure with spectacular views.</li>
+        <li><strong>Attabad Lake</strong> - A beautiful, turquoise lake created by a landslide in 2010, surrounded by towering cliffs and offering boating activities.</li>
+        <li><strong>Passu Cones</strong> - Iconic pointed peaks that are among the most photographed mountains in Pakistan.</li>
+        <li><strong>Eagle’s Nest</strong> - A vantage point offering panoramic views of the Hunza Valley and several towering peaks, including Nanga Parbat.</li>
+        <li><strong>Khunjerab Pass</strong> - The highest border crossing between Pakistan and China, located at an altitude of 4,693 meters (15,397 feet).</li>
+    </ul>
+
+  
+    <img class="image scroll-reveal" src="../assest/Hunza Valley2.png" alt="Hunza Valley Views" class="full-width-image">
+
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+        Hunza Valley is a paradise for nature lovers and adventure enthusiasts. Our personalized travel packages offer guided treks, visits to the valley's historical sites, and opportunities for cultural immersion. Whether you want to explore ancient forts, hike to scenic viewpoints, or experience the local way of life, we provide customized itineraries to suit your travel preferences.
+    </p>
+
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+        The best time to visit Hunza Valley is during spring (April to June) and autumn (September to November) when the weather is mild, and the valley is adorned with colorful blossoms or golden autumn leaves. Summer (July to August) is also a good time for trekking and sightseeing. Winter months (December to February) can be very cold, but they offer a peaceful, snowy retreat.
+    </p>
+
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+        Hunza Valley is home to a friendly and hospitable people, predominantly of the Burusho ethnicity. The local culture is rich in traditions, and visitors can enjoy the valley’s unique music, dance, and festivals. Hunza is also known for its delicious cuisine, including dishes like <em>chapshuro</em> (a traditional meat-filled pastry), <em>hunza bread</em>, and <em>guluk (apricot-based desserts)</em>. Don’t miss the local apricots, which are a specialty of the region.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+        - Pack warm clothes even in summer, as temperatures can drop in higher altitudes.<br>
+        - Be prepared for long drives along narrow, winding roads—ensure your vehicle is in good condition.<br>
+        - Carry cash, as ATMs can be scarce in remote areas.<br>
+        - Respect local traditions and customs, especially when visiting villages or religious sites.<br>
+        - Always stay hydrated, especially when hiking at higher altitudes.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+        <input type="date" id="travelDate" placeholder="Select your travel date">
+        <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">     
+      <a href="../services/ticket.html">Plan Your Trip to Hunza Valley Now</a>
+    </div>
+</div>
+<!-- Hunza Valley End -->
+
+
+  
+         <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+       
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+ 
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+
+    
+
+        <script>
+            //toogle js code start
+ const navToggler = document.querySelector(".nav-toggler");
+ navToggler.addEventListener("click", navToggle);
+
+ function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+    	nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+    	nav.removeAttribute("style");
+    }
+ } 
+//toogle js code end
+            function checkAvailability() {
+                const dateInput = document.getElementById("travelDate");
+                const selectedDate = dateInput.value;
+                
+                if (selectedDate) {
+                    dateInput.disabled = true;
+        
+                    alert(`You selected: ${selectedDate}. Availability has been checked!`);
+                } else {
+                    alert("Please select a date.");
+                }
+            }
+
+
+               //loader js
+    window.addEventListener('load', function() {
+    const loader = document.querySelector('.loader');
+    loader.classList.add('fade-out');
+});
+
+
+//Overall animation start
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+    });
+});
+window.dispatchEvent(new Event("scroll"));
+
+        </script>
+
+</body>
+
+
+</html>

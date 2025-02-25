@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maldives</title>
+    <link rel="stylesheet" href="./destination.css">
+</head>
+<body>
+      <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+</div>
+<!--loader end-->
+    <!--navbar start-->
+    <header class="header">
+        <div class="nav-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a class="header-link" href="../bolg.html"    style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="header-link" href="#">Services <i class="fas fa-chevron-down"
+                                    style="font-size: 1rem;"></i></a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+                                  </ul>
+                              </li>
+                              <li><a class="header-link" href="../About.html">About</a></li>
+                              <li><a class="header-link" href="../Contact.html">Contact</a></li>
+                          </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+  <!--navbar end-->
+ 
+  <!-- Maldives start -->
+<div class="hero-image">
+    <img class="main-img" src="../assest/maldives.avif">
+</div>
+<div class="heading">Maldives</div>
+<div class="content">
+
+    <h2 class="scroll-reveal">About Maldives</h2>
+    <p class="scroll-reveal">
+        The Maldives, a tropical paradise in the Indian Ocean, is a famous destination known for its crystal-clear waters, white sandy beaches, and luxurious overwater bungalows. Comprising over 1,000 islands, the Maldives offers an unforgettable getaway with unparalleled natural beauty, vibrant marine life, and world-class resorts. Whether you're seeking relaxation or adventure, the Maldives provides an idyllic escape.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+        <li><strong>Private Resorts</strong> - Stay in luxurious resorts offering exclusive villas and overwater bungalows, many with private pools and direct beach access.</li>
+        <li><strong>Maafushi Island</strong> - A local island perfect for those seeking an authentic Maldivian experience, with plenty of guesthouses and restaurants.</li>
+        <li><strong>Maldives Diving and Snorkeling</strong> - Explore vibrant coral reefs, colorful fish, and even spot manta rays and whale sharks while diving or snorkeling.</li>
+        <li><strong>Sunset Cruises</strong> - Take a romantic boat ride at sunset and enjoy the breathtaking views of the ocean while spotting dolphins and marine life.</li>
+        <li><strong>Banana Reef</strong> - One of the most popular diving spots in the Maldives, famous for its coral gardens and abundant sea life.</li>
+    </ul>
+
+    <img class="image scroll-reveal" src="../assest/maldives2.jpg"  alt="Maldives Beach View" class="full-width-image">
+
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+        Our Maldives packages are curated for a luxurious and unforgettable holiday. Whether you're looking for an all-inclusive resort, a private island experience, or water sports adventures, we offer customized trips designed to meet your needs. Enjoy the beauty of the Maldives with expert guidance and exclusive experiences.
+    </p>
+
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+        The best time to visit the Maldives is during the dry season, from November to April, when the weather is warm and the skies are clear. The months from May to October experience more rainfall and occasional storms, making the dry season ideal for beach activities and water sports.
+    </p>
+
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+        The Maldives has a unique culture influenced by its Islamic heritage, with traditional music, dance, and art playing an important role. The cuisine is a fusion of Maldivian, Indian, and Sri Lankan flavors, with dishes like <em>mas huni</em> (a traditional breakfast), <em>garudhiya</em> (fish soup), and <em>fihunu mas</em> (grilled fish). Seafood is the highlight of Maldivian cuisine.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+        - Dress modestly when visiting local islands to respect the local culture.<br>
+        - Don’t forget sunscreen—Maldives’ tropical climate means the sun can be very strong.<br>
+        - Bring comfortable water shoes if you plan to explore coral reefs or swim.<br>
+        - If you’re traveling to a resort, check if they offer all-inclusive packages for meals and activities.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+        <input type="date" id="travelDate" placeholder="Select your travel date">
+        <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+        <a href="../services/ticket.html">Plan Your Trip to the Maldives Now</a>
+    </div>
+</div>
+
+<!-- End -->
+
+
+      <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+       
+          </ul>
+</div>
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+    
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+
+    
+
+        <script>
+            //toogle js code start
+ const navToggler = document.querySelector(".nav-toggler");
+ navToggler.addEventListener("click", navToggle);
+
+ function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+    	nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+    	nav.removeAttribute("style");
+    }
+ } 
+//toogle js code end
+            function checkAvailability() {
+                const dateInput = document.getElementById("travelDate");
+                const selectedDate = dateInput.value;
+                
+                if (selectedDate) {
+                    dateInput.disabled = true;
+        
+                    alert(`You selected: ${selectedDate}. Availability has been checked!`);
+                } else {
+                    alert("Please select a date.");
+                }
+            }
+               //loader js
+    window.addEventListener('load', function() {
+    const loader = document.querySelector('.loader');
+    loader.classList.add('fade-out');
+});
+
+//Overall animation start
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+    });
+});
+window.dispatchEvent(new Event("scroll"));
+
+        </script>
+
+</body>
+
+
+</html>

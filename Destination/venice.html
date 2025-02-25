@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venice</title>
+  <link rel="stylesheet" href="./destination.css">
+</head>
+
+<body>
+  <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+  </div>
+  <!--loader end-->
+  <!--navbar start-->
+  <header class="header">
+    <div class="nav-container">
+      <div class="row align-items-center justify-content-between">
+        <div class="logo">
+          <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+        </div>
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+            <li class="dropdown">
+              <a class="header-link" href="../bolg.html" style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class="header-link" href="#">Services <i class="fas fa-chevron-down" style="font-size: 1rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+              </ul>
+            </li>
+            <li><a class="header-link" href="../About.html">About</a></li>
+            <li><a class="header-link" href="../Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--navbar end-->
+  <!-- Venice start -->
+  <div class="hero-image">
+    <img class="main-img" src="../assest/Venice.jpg">
+  </div>
+  <div class="heading">Venice</div>
+  <div class="content">
+
+    <h2 class="scroll-reveal">About Venice</h2>
+    <p class="scroll-reveal">
+      Venice, the "City of Canals," is one of the most unique and romantic cities in the world. Built on a network of
+      canals, this historic city is famous for its stunning architecture, rich cultural heritage, and enchanting gondola
+      rides. From the iconic St. Mark’s Square to the charming alleyways, Venice offers a captivating blend of beauty,
+      history, and culture.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+      <li><strong>St. Mark’s Basilica</strong> - A stunning example of Byzantine architecture with intricate mosaics and
+        a rich history.</li>
+      <li><strong>Rialto Bridge</strong> - One of Venice’s most famous landmarks, offering breathtaking views of the
+        Grand Canal.</li>
+      <li><strong>Doge’s Palace</strong> - A magnificent Gothic building that was once the residence of the Doge, with
+        museums and art collections inside.</li>
+      <li><strong>Gondola Ride</strong> - A quintessential Venetian experience, offering scenic views of the canals and
+        iconic buildings from the water.</li>
+      <li><strong>Murano Island</strong> - Famous for its glass-making tradition, you can visit workshops to see
+        artisans create intricate glass pieces.</li>
+      <li><strong>Burano Island</strong> - Known for its colorful houses and lace-making heritage, a picturesque and
+        charming island to explore.</li>
+    </ul>
+
+    <img class="image scroll-reveal" src="../assest/Venice2.jpg" alt="Venice Canal" class="full-width-image">
+
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+      We offer personalized itineraries to Venice, combining cultural immersion, romantic experiences, and unforgettable
+      moments. From private gondola rides to exclusive tours of historical landmarks, we ensure that your visit is
+      seamless, unique, and unforgettable. Let us guide you through the timeless beauty of Venice.
+    </p>
+
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+      The best time to visit Venice is during the spring (April to June) and fall (September to November) when the
+      weather is mild, and the city is less crowded. Summer (July to August) is the peak tourist season, which means
+      higher crowds and higher prices. Winter (December to February) is quiet, perfect for those who prefer fewer
+      tourists and a more intimate experience.
+    </p>
+
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+      Venice’s culture is a blend of Italian and Venetian traditions, with a rich artistic and musical history. The
+      city’s cuisine is based on fresh seafood, with dishes like <em>risotto al nero di seppia</em> (squid ink risotto)
+      and <em>cicchetti</em> (small Venetian tapas). Don’t forget to try a <em>spritz</em>, the famous Venetian
+      cocktail, while enjoying the stunning views along the canals.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+      - Wear comfortable shoes, as you’ll be walking a lot on Venice’s cobblestone streets.<br>
+      - Be prepared for high water levels in winter (acqua alta), and bring waterproof shoes or boots.<br>
+      - Venice is known for its narrow alleyways, so have a good map or guide to explore the city.<br>
+      - Make sure to book gondola rides in advance, as they can get very busy during peak seasons.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+      <input type="date" id="travelDateVenice" placeholder="Select your travel date">
+      <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+      <a href="../services/ticket.html">Plan Your Trip to Venice Now</a>
+    </div>
+  </div>
+
+  <!-- End -->
+
+
+
+
+  <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+
+          </ul>
+        </div>
+
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+  <script>
+    //toogle js code start
+    const navToggler = document.querySelector(".nav-toggler");
+    navToggler.addEventListener("click", navToggle);
+
+    function navToggle() {
+      navToggler.classList.toggle("active");
+      const nav = document.querySelector(".nav");
+      nav.classList.toggle("open");
+      if (nav.classList.contains("open")) {
+        nav.style.maxHeight = nav.scrollHeight + "px";
+      }
+      else {
+        nav.removeAttribute("style");
+      }
+    }
+    //toogle js code end
+    function checkAvailability() {
+      const dateInput = document.getElementById("travelDate");
+      const selectedDate = dateInput.value;
+
+      if (selectedDate) {
+        dateInput.disabled = true;
+        alert(`You selected: ${selectedDate}. Availability has been checked!`);
+      } else {
+        alert("Please select a date.");
+      }
+    }
+    //loader js
+    window.addEventListener('load', function () {
+      const loader = document.querySelector('.loader');
+      loader.classList.add('fade-out');
+    });
+
+
+
+    //Overall animation start
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+      });
+    });
+    window.dispatchEvent(new Event("scroll"));
+
+  </script>
+
+</body>
+
+</html>

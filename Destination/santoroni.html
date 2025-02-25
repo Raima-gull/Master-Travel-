@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santorini</title>
+  <link rel="stylesheet" href="./destination.css">
+</head>
+
+<body>
+  <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+  </div>
+  <!--loader end-->
+  <!--navbar start-->
+  <header class="header">
+    <div class="nav-container">
+      <div class="row align-items-center justify-content-between">
+        <div class="logo">
+          <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+        </div>
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+            <li class="dropdown">
+              <a class="header-link" href="../bolg.html" style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class="header-link" href="#">Services <i class="fas fa-chevron-down" style="font-size: 1rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+              </ul>
+            </li>
+            <li><a class="header-link" href="../About.html">About</a></li>
+            <li><a class="header-link" href="../Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--navbar end-->
+  <!-- Santorini start -->
+  <div class="hero-image">
+    <img class="main-img" src="../assest/santorini.jpg">
+  </div>
+  <div class="heading">Santorini</div>
+  <div class="content">
+
+    <h2 class="scroll-reveal">About Santorini</h2>
+    <p class="scroll-reveal">
+      Santorini, one of the most famous Greek islands, is known for its stunning white-washed buildings with blue domes,
+      crystal-clear waters, and breathtaking sunsets. Located in the Aegean Sea, this volcanic island offers a mix of
+      dramatic landscapes, beautiful beaches, and ancient ruins. Santorini is a dream destination for travelers seeking
+      both romance and adventure in a picturesque setting.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+      <li><strong>Oia Village</strong> - Famous for its iconic sunsets, charming narrow streets, and beautiful
+        white-and-blue houses.</li>
+      <li><strong>Fira Town</strong> - The island's bustling capital, offering stunning views, museums, shops, and
+        restaurants.</li>
+      <li><strong>Akrotiri Archaeological Site</strong> - An ancient Minoan city buried by a volcanic eruption,
+        showcasing well-preserved ruins.</li>
+      <li><strong>Red Beach</strong> - Known for its striking red sand and crystal-clear waters, perfect for swimming
+        and relaxation.</li>
+      <li><strong>Santorini Volcano</strong> - Take a boat tour to the volcanic island in the center of the caldera, and
+        hike its crater for panoramic views.</li>
+      <li><strong>Wine Tasting</strong> - Santorini is known for its wine, especially the Assyrtiko grape, and offers
+        numerous wineries with breathtaking views.</li>
+      <li><strong>Perissa Beach</strong> - A black sand beach offering clear waters and plenty of beachside bars and
+        restaurants.</li>
+    </ul>
+
+    <img class="image scroll-reveal" src="../assest/Santorini2.jpg" alt="Santorini View" class="full-width-image">
+
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+      Let us help you plan your dream Santorini getaway with exclusive tours, luxury accommodations, and personalized
+      itineraries. Whether you're looking for a romantic retreat, a cultural exploration, or simply a relaxing beach
+      holiday, our expert team will ensure an unforgettable experience on this iconic island.
+    </p>
+
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+      The best time to visit Santorini is during the spring (April to June) and fall (September to October) when the
+      weather is pleasant and the island is less crowded. The summer months (July and August) are peak tourist season,
+      and while the island is lively, it can also get very crowded. Winter (November to March) is quieter, but many
+      businesses may be closed during this period.
+    </p>
+
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+      Santorini’s culture is deeply rooted in Greek traditions, and its cuisine is a delightful mix of Mediterranean
+      flavors. Don’t miss out on dishes like <em>fava</em> (yellow split pea puree), <em>tomatokeftedes</em> (tomato
+      fritters), and <em>kefalotyri</em> (a traditional cheese). Enjoy the local wines, especially the renowned
+      <em>Assyrtiko</em>, and relax in the charming tavernas while watching the sunset.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+      - Santorini is hilly, so comfortable shoes are a must for walking around the island.<br>
+      - Be prepared for strong sun, especially in summer—sunscreen and a hat are essential.<br>
+      - Renting a quad bike or ATV is a fun and easy way to explore the island’s scenic routes.<br>
+      - Book your accommodation in advance, especially during peak tourist season, as Santorini can get very busy.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+      <input type="date" id="travelDate" placeholder="Select your travel date">
+      <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+      <a href="../services/ticket.html">Plan Your Trip to Santorini Now</a>
+    </div>
+  </div>
+
+  <!-- End -->
+
+  <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+
+          </ul>
+        </div>
+
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+  <script>
+    //toogle js code start
+    const navToggler = document.querySelector(".nav-toggler");
+    navToggler.addEventListener("click", navToggle);
+
+    function navToggle() {
+      navToggler.classList.toggle("active");
+      const nav = document.querySelector(".nav");
+      nav.classList.toggle("open");
+      if (nav.classList.contains("open")) {
+        nav.style.maxHeight = nav.scrollHeight + "px";
+      }
+      else {
+        nav.removeAttribute("style");
+      }
+    }
+    //toogle js code end
+    function checkAvailability() {
+      const dateInput = document.getElementById("travelDate");
+      const selectedDate = dateInput.value;
+
+      if (selectedDate) {
+        dateInput.disabled = true;
+        alert(`You selected: ${selectedDate}. Availability has been checked!`);
+      } else {
+        alert("Please select a date.");
+      }
+    }
+    //loader js
+    window.addEventListener('load', function () {
+      const loader = document.querySelector('.loader');
+      loader.classList.add('fade-out');
+    });
+
+    //Overall animation start
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+      });
+    });
+    window.dispatchEvent(new Event("scroll"));
+
+  </script>
+
+</body>
+
+</html>

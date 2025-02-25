@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris</title>
+  <link rel="stylesheet" href="./destination.css">
+</head>
+
+<body>
+  <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+  </div>
+  <!--loader end-->
+  <!--navbar start-->
+  <header class="header">
+    <div class="nav-container">
+      <div class="row align-items-center justify-content-between">
+        <div class="logo">
+          <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+        </div>
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+            <li class="dropdown">
+              <a class="header-link" href="../bolg.html" style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class="header-link" href="#">Services <i class="fas fa-chevron-down" style="font-size: 1rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+              </ul>
+            </li>
+            <li><a class="header-link" href="../About.html">About</a></li>
+            <li><a class="header-link" href="../Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--navbar end-->
+
+  <!-- Paris start -->
+  <div class="hero-image">
+    <img class="main-img" src="../assest/paris.webp">
+  </div>
+  <div class="heading">Paris</div>
+  <div class="content">
+
+    <h2 class="scroll-reveal">About Paris</h2>
+    <p class="scroll-reveal">
+      Paris, known as the "City of Light," is one of the most iconic cities in the world. Famous for its rich history,
+      stunning architecture, and world-class art and culture, Paris is a dream destination for travelers. From the
+      Eiffel Tower to charming neighborhoods like Montmartre, Paris is a blend of romance, art, and history. Whether
+      you're admiring masterpieces in the Louvre, strolling along the Seine, or savoring French cuisine, Paris has
+      something for everyone.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+      <li><strong>Eiffel Tower</strong> - The symbol of Paris, offering breathtaking views of the city from its
+        observation decks.</li>
+      <li><strong>Louvre Museum</strong> - Home to thousands of works of art, including the famous <em>Mona Lisa</em>
+        and <em>Venus de Milo</em>.</li>
+      <li><strong>Notre-Dame Cathedral</strong> - A Gothic masterpiece with stunning architecture and a rich history.
+      </li>
+      <li><strong>Sacré-Cœur Basilica</strong> - A beautiful basilica located at the highest point in Paris, offering
+        panoramic views of the city.</li>
+      <li><strong>Champs-Élysées and Arc de Triomphe</strong> - A famous avenue leading to the grand Arc de Triomphe, a
+        symbol of France’s military history.</li>
+      <li><strong>Montmartre</strong> - A charming district known for its artists, cafés, and the iconic <em>Place du
+          Tertre</em>.</li>
+      <li><strong>Versailles Palace</strong> - A short trip from Paris, this opulent palace and gardens are a must-see
+        for history and architecture lovers.</li>
+    </ul>
+
+    <img class="image scroll-reveal" src="../assest/paris2.jpeg" alt="Paris View" class="full-width-image">
+
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+      We craft unique travel experiences that showcase the magic of Paris. Whether you're looking for a romantic
+      getaway, a cultural exploration, or a taste of Parisian life, we can design the perfect itinerary for you. Our
+      expert team ensures a seamless experience with luxury accommodations, curated tours, and personalized attention to
+      detail.
+    </p>
+
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+      Paris is beautiful year-round, but the best time to visit is during the spring (April to June) or fall (September
+      to November) when the weather is mild, and the crowds are smaller. Summer (July and August) is the peak tourist
+      season, and while the weather is warm, it can be quite crowded. Winter (December to February) is perfect for those
+      seeking fewer tourists and a cozy atmosphere, especially during the holiday season.
+    </p>
+
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+      Paris is famous for its art, fashion, and food. Experience world-class art galleries and museums, iconic French
+      cuisine like <em>croissants</em>, <em>escargot</em>, and <em>coq au vin</em>, and explore the city’s café culture.
+      Don’t forget to visit a traditional bakery for a freshly made <em>baguette</em> or <em>macaron</em>.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+      - Learn a few basic French phrases—locals appreciate it when tourists make an effort to speak the language.<br>
+      - Be cautious around tourist-heavy areas—pickpockets can be common in crowded spots like the Eiffel Tower.<br>
+      - Take advantage of the metro system, it’s efficient and affordable for getting around the city.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+      <input type="date" id="travelDate" placeholder="Select your travel date">
+      <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+      <a href="../services/ticket.html">Plan Your Trip to Paris Now</a>
+    </div>
+  </div>
+
+  <!-- End -->
+
+  <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+
+          </ul>
+        </div>
+
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+
+
+
+  <script>
+    //toogle js code start
+    const navToggler = document.querySelector(".nav-toggler");
+    navToggler.addEventListener("click", navToggle);
+
+    function navToggle() {
+      navToggler.classList.toggle("active");
+      const nav = document.querySelector(".nav");
+      nav.classList.toggle("open");
+      if (nav.classList.contains("open")) {
+        nav.style.maxHeight = nav.scrollHeight + "px";
+      }
+      else {
+        nav.removeAttribute("style");
+      }
+    }
+    //toogle js code end
+    function checkAvailability() {
+      const dateInput = document.getElementById("travelDate");
+      const selectedDate = dateInput.value;
+
+      if (selectedDate) {
+        dateInput.disabled = true;
+        alert(`You selected: ${selectedDate}. Availability has been checked!`);
+      } else {
+        alert("Please select a date.");
+      }
+    }
+
+    //loader js
+    window.addEventListener('load', function () {
+      const loader = document.querySelector('.loader');
+      loader.classList.add('fade-out');
+    });
+
+
+
+    //Overall animation start
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+      });
+    });
+    window.dispatchEvent(new Event("scroll"));
+
+  </script>
+
+</body>
+
+
+</html>

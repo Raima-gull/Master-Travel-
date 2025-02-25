@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switzerland</title>
+  <link rel="stylesheet" href="./destination.css">
+</head>
+
+<body>
+  <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+  </div>
+  <!--loader end-->
+
+  <!--navbar start-->
+  <header class="header">
+    <div class="nav-container">
+      <div class="row align-items-center justify-content-between">
+        <div class="logo">
+          <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+        </div>
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+            <li class="dropdown">
+              <a class="header-link" href="../bolg.html" style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class="header-link" href="#">Services <i class="fas fa-chevron-down" style="font-size: 1rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+              </ul>
+            </li>
+            <li><a class="header-link" href="../About.html">About</a></li>
+            <li><a class="header-link" href="../Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--navbar end-->
+  <!-- Switzerland Start -->
+  <div class="hero-image">
+    <img class="main-img" src="../assest/switziland.webp" alt="Switzerland Mountains and Lake">
+  </div>
+  <div class="heading">Switzerland</div>
+  <div class="content">
+
+    <h2 class="scroll-reveal">About Switzerland</h2>
+    <p class="scroll-reveal">
+      Switzerland, nestled in the heart of Europe, is known for its breathtaking landscapes, pristine lakes, and
+      majestic mountains. Famous for its charming villages, luxury resorts, and rich cultural heritage, Switzerland
+      offers a perfect blend of outdoor adventure and tranquility. Whether you're skiing in the Alps, relaxing by a
+      serene lake, or exploring quaint towns, Switzerland promises an unforgettable experience.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+      <li><strong>The Matterhorn</strong> - One of the most iconic mountains in the world, known for its distinctive
+        pyramid shape, ideal for hiking and skiing.</li>
+      <li><strong>Lake Geneva</strong> - A beautiful lake surrounded by vineyards, castles, and the cosmopolitan city of
+        Geneva.</li>
+      <li><strong>Zurich</strong> - Switzerland's largest city, offering a perfect blend of modern urban culture, art,
+        and stunning natural beauty.</li>
+      <li><strong>Jungfraujoch</strong> - Known as the "Top of Europe," this is the highest railway station in Europe
+        with spectacular views of glaciers and the Alps.</li>
+      <li><strong>Lucerne</strong> - A charming city known for its preserved medieval architecture, covered wooden
+        bridges, and proximity to Mount Pilatus.</li>
+      <li><strong>Interlaken</strong> - The adventure capital of Switzerland, offering activities such as paragliding,
+        hiking, and exploring the nearby Swiss Jungfrau region.</li>
+      <li><strong>Bern</strong> - The capital city, home to medieval architecture and a beautiful old town that is a
+        UNESCO World Heritage site.</li>
+    </ul>
+
+    <img class="image scroll-reveal" src="../assest/switziland2.jpg" alt="Switzerland Alpine View" class="full-width-image">
+
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+      Whether you're looking for outdoor adventures or relaxing retreats, Switzerland has it all. We offer customized
+      tours that cater to your interests, whether it's skiing, hiking, exploring cultural landmarks, or simply enjoying
+      the beauty of Swiss nature. With expert guides and luxurious accommodations, we make sure your trip is seamless
+      and unforgettable.
+    </p>
+
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+      The best time to visit Switzerland depends on the activities you enjoy. Winter (December to February) is perfect
+      for skiing and snow sports, while the summer months (June to September) offer the best weather for hiking,
+      sightseeing, and exploring Swiss cities. Spring (April to May) and fall (October to November) offer mild weather,
+      fewer crowds, and beautiful natural scenery, especially in the countryside.
+    </p>
+
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+      Switzerland’s cuisine is a mix of German, French, and Italian influences, with a focus on fresh, local
+      ingredients. Must-try dishes include <em>fondue</em> (melted cheese served with bread), <em>raclette</em>, and
+      <em>rosti</em> (crispy fried potatoes). Swiss chocolate is world-famous, and you can't visit without trying some.
+      Don't forget to sample Swiss wines, especially those from the Lake Geneva region.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+      - Switzerland can be expensive, so plan your budget accordingly, especially for activities and dining.<br>
+      - Public transportation is efficient, and trains are a great way to explore the country.<br>
+      - Be prepared for varying weather conditions, as the mountains can be chilly even in summer.<br>
+      - Visit smaller towns and villages for a more authentic experience and to avoid the crowds of major cities.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+      <input type="date" id="travelDate" placeholder="Select your travel date">
+      <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+      <a href="../services/ticket.html">Plan Your Trip to Switzerland Now</a>
+    </div>
+  </div>
+  <!-- End -->
+
+  <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+
+          </ul>
+        </div>
+
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+  <script>
+    //toogle js code start
+    const navToggler = document.querySelector(".nav-toggler");
+    navToggler.addEventListener("click", navToggle);
+
+    function navToggle() {
+      navToggler.classList.toggle("active");
+      const nav = document.querySelector(".nav");
+      nav.classList.toggle("open");
+      if (nav.classList.contains("open")) {
+        nav.style.maxHeight = nav.scrollHeight + "px";
+      }
+      else {
+        nav.removeAttribute("style");
+      }
+    }
+    //toogle js code end
+    function checkAvailability() {
+      const dateInput = document.getElementById("travelDate");
+      const selectedDate = dateInput.value;
+
+      if (selectedDate) {
+        dateInput.disabled = true;
+
+        alert(`You selected: ${selectedDate}. Availability has been checked!`);
+      } else {
+        alert("Please select a date.");
+      }
+    }
+    //loader js
+    window.addEventListener('load', function () {
+      const loader = document.querySelector('.loader');
+      loader.classList.add('fade-out');
+    });
+
+    //Overall animation start
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+      });
+    });
+    window.dispatchEvent(new Event("scroll"));
+
+  </script>
+
+</body>
+
+</html>

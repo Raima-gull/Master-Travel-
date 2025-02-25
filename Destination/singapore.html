@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singapore</title>
+  <link rel="stylesheet" href="./destination.css">
+</head>
+
+<body>
+  <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+  </div>
+  <!--loader end-->
+  <!--navbar start-->
+  <header class="header">
+    <div class="nav-container">
+      <div class="row align-items-center justify-content-between">
+        <div class="logo">
+          <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+        </div>
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+            <li class="dropdown">
+              <a class="header-link" href="../bolg.html" style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class="header-link" href="#">Services <i class="fas fa-chevron-down" style="font-size: 1rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+              </ul>
+            </li>
+            <li><a class="header-link" href="../About.html">About</a></li>
+            <li><a class="header-link" href="../Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--navbar end-->
+  <!-- Singapore Start -->
+  <div class="hero-image">
+    <img class="main-img" src="../assest/Singapore.jpg" alt="Singapore Scenery">
+  </div>
+  <div class="heading">Singapore</div>
+  <div class="content">
+
+    <h2 class="scroll-reveal">About Singapore</h2>
+    <p class="scroll-reveal">
+      Singapore, often called the "Lion City," is a modern metropolis known for its iconic skyline, vibrant
+      neighborhoods, and world-class attractions. This small island nation is a melting pot of cultures, offering a
+      unique blend of modernity and tradition. From the futuristic Gardens by the Bay to the bustling streets of
+      Chinatown and Little India, Singapore is a destination that promises unforgettable experiences.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+      <li><strong>Marina Bay Sands</strong> - A luxurious integrated resort with a sky-high infinity pool and
+        breathtaking views.</li>
+      <li><strong>Gardens by the Bay</strong> - A stunning garden attraction featuring the iconic Supertree Grove and
+        Cloud Forest.</li>
+      <li><strong>Sentosa Island</strong> - A paradise for fun and relaxation with beaches, theme parks, and adventure
+        activities.</li>
+      <li><strong>Universal Studios Singapore</strong> - A world-class theme park offering thrilling rides and
+        entertainment.</li>
+      <li><strong>Singapore Zoo</strong> - Renowned for its open-concept enclosures and diverse wildlife exhibits.</li>
+      <li><strong>Chinatown</strong> - A cultural hub with historic temples, vibrant markets, and delicious street food.
+      </li>
+      <li><strong>Orchard Road</strong> - A shopping haven featuring luxury brands, malls, and boutiques.</li>
+    </ul>
+
+    <img class="image scroll-reveal" src="../assest/Singapore2.webp" alt="Singapore" class="full-width-image">
+
+    <h2 class="scroll-reveal"> Best Time to Visit</h2>
+    <p class="scroll-reveal">
+      Singapore is a year-round destination due to its tropical climate. However, the best time to visit is between
+      February and April, when the weather is relatively dry and ideal for outdoor activities. Keep in mind that sudden
+      rain showers can occur anytime, so it’s always good to carry an umbrella.
+    </p>
+
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+      Singapore is a cultural melting pot, and this diversity is reflected in its food. Don’t miss out on iconic dishes
+      like <em>chilli crab</em>, <em>Hainanese chicken rice</em>, <em>laksa</em>, and <em>roti prata</em>. Experience
+      vibrant festivals like Chinese New Year, Deepavali, and Hari Raya Puasa that showcase the nation's rich heritage.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+      - Use the efficient MRT system for easy travel around the city.<br>
+      - Keep the city’s cleanliness in mind; avoid littering and chewing gum in public places.<br>
+      - Visit hawker centers for affordable and authentic Singaporean meals.<br>
+      - Pack light clothing as the weather is typically warm and humid.<br>
+      - Purchase tickets online for popular attractions to avoid long queues.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+      <input type="date" id="travelDate" placeholder="Select your travel date">
+      <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+      <a href="../services/ticket.html"Plan Your Trip to Singapore Now</a>
+    </div>
+  </div>
+  <!-- Singapore End -->
+
+
+
+  <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+
+          </ul>
+        </div>
+
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+  <script>
+    //toogle js code start
+    const navToggler = document.querySelector(".nav-toggler");
+    navToggler.addEventListener("click", navToggle);
+
+    function navToggle() {
+      navToggler.classList.toggle("active");
+      const nav = document.querySelector(".nav");
+      nav.classList.toggle("open");
+      if (nav.classList.contains("open")) {
+        nav.style.maxHeight = nav.scrollHeight + "px";
+      }
+      else {
+        nav.removeAttribute("style");
+      }
+    }
+    //toogle js code end
+    function checkAvailability() {
+      const dateInput = document.getElementById("travelDate");
+      const selectedDate = dateInput.value;
+
+      if (selectedDate) {
+        dateInput.disabled = true;
+        alert(`You selected: ${selectedDate}. Availability has been checked!`);
+      } else {
+        alert("Please select a date.");
+      }
+    }
+    //loader js
+    window.addEventListener('load', function () {
+      const loader = document.querySelector('.loader');
+      loader.classList.add('fade-out');
+    });
+
+    //Overall animation start
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+      });
+    });
+    window.dispatchEvent(new Event("scroll"));
+
+  </script>
+
+</body>
+
+</html>

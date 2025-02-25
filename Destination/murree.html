@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murree</title>
+    <link rel="stylesheet" href="./destination.css">
+</head>
+
+<body>
+  <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+</div>
+<!--loader end-->
+    <!--navbar start-->
+    <header class="header">
+        <div class="nav-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a class="header-link" href="../bolg.html"   style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="header-link" href="#">Services <i class="fas fa-chevron-down"
+                                    style="font-size: 1rem;"></i></a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+                                  </ul>
+                              </li>
+                              <li><a class="header-link" href="../About.html">About</a></li>
+                              <li><a class="header-link" href="../Contact.html">Contact</a></li>
+                          </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--navbar end-->
+  
+    <!-- Murree Start -->
+<div class="hero-image">
+    <img class="main-img" src="../assest/Murree.jpg" alt="Murree Hills">
+  </div>
+  <div class="heading">Murree</div>
+  <div class="content">
+  
+    <h2>About Murree</h2>
+    <p>
+        Located in the foothills of the Himalayas, Murree is a charming hill station in the Punjab province of Pakistan. Known for its cool climate, pine forests, and scenic views, Murree attracts tourists throughout the year. Whether you're looking for a relaxing retreat or an adventure-filled getaway, Murree has something for everyone—from serene lakes and hiking trails to vibrant markets and colonial-era architecture.
+    </p>
+  
+    <h2>Top Attractions</h2>
+    <ul>
+        <li><strong>Patriata (New Murree)</strong> - Famous for its chairlift and cable car rides, offering panoramic views of the valley.</li>
+        <li><strong>Mall Road</strong> - A bustling street lined with shops, restaurants, and local handicraft stalls, ideal for a leisurely walk and shopping.</li>
+        <li><strong>Pindi Point</strong> - One of the highest points in Murree, offering spectacular views of the surrounding mountains and valleys.</li>
+        <li><strong>Kashmir Point</strong> - A popular spot for tourists, providing stunning views of the Kashmir hills and a peaceful ambiance.</li>
+        <li><strong>Ayubia National Park</strong> - A must-visit for nature lovers, with hiking trails, wildlife, and beautiful forests.</li>
+        <li><strong>Lower Topa</strong> - A quiet area perfect for a peaceful retreat, offering beautiful views and a serene environment.</li>
+        <li><strong>Rawalpindi to Murree Road</strong> - A scenic drive through picturesque landscapes, perfect for a relaxing journey to Murree.</li>
+    </ul>
+  
+
+    <img class="image scroll-reveal" src="../assest/Murree2.webp" alt="Murree View" class="full-width-image">
+  
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+        Murree is the perfect destination for those looking to escape the heat and hustle of city life. We offer personalized travel experiences to explore the best of Murree, from exciting chairlift rides to tranquil hikes and cultural explorations. With luxurious accommodations and expert guides, we ensure your trip is relaxing and memorable.
+    </p>
+  
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+        The best time to visit Murree is during the summer months (May to September) when the weather is cool and perfect for outdoor activities. However, the winter season (December to February) offers a magical snowy landscape, ideal for those looking to experience snowfall and enjoy winter sports.
+    </p >
+  
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+        Murree has a rich cultural heritage, influenced by the local Kashmiri and Punjabi cultures. The town is famous for its local cuisine, including dishes such as <em>Chapli Kebab</em>, <em>Saag</em>, and <em>Chicken Karahi</em>. Don’t forget to try local sweets like <em>Gulab Jamun</em> and <em>Kulfi</em>, along with the traditional <em>Chai</em>.
+    </p >
+  
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+        - Pack warm clothing if visiting during the winter, as temperatures can drop significantly.<br>
+        - Be cautious while driving in hilly areas, especially during the rainy season, as roads can be slippery.<br>
+        - Visit early in the morning or later in the evening to avoid the heavy crowds on popular spots.<br>
+        - Make sure to try the local delicacies at the food stalls along Mall Road.
+    </p>
+  
+    <div class="date-picker scroll-reveal">
+        <input type="date" id="travelDate" placeholder="Select your travel date">
+        <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+        <a href="../services/ticket.html">Plan Your Trip to Murree Now</a>
+    </div>
+  </div>
+  <!-- End -->
+  
+
+        <!--end -->
+         <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+       
+          </ul>
+        </div>
+
+    
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+
+    
+
+        <script>
+            //toogle js code start
+ const navToggler = document.querySelector(".nav-toggler");
+ navToggler.addEventListener("click", navToggle);
+
+ function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+    	nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+    	nav.removeAttribute("style");
+    }
+ } 
+//toogle js code end
+            function checkAvailability() {
+                const dateInput = document.getElementById("travelDate");
+                const selectedDate = dateInput.value;
+                
+                if (selectedDate) {
+                    dateInput.disabled = true;
+
+                    alert(`You selected: ${selectedDate}. Availability has been checked!`);
+                } else {
+                    alert("Please select a date.");
+                }
+            }
+               //loader js
+    window.addEventListener('load', function() {
+    const loader = document.querySelector('.loader');
+    loader.classList.add('fade-out');
+});
+
+
+//Overall animation start
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+    });
+});
+window.dispatchEvent(new Event("scroll"));
+
+        </script>
+
+</body>
+
+
+</html>

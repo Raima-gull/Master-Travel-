@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --color-1: #000000;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #f8f8f8;
+      scroll-behavior: smooth;
+      opacity: 0;
+      animation: fadeInPage 1s forwards;
+    }
+
+    @keyframes fadeInPage {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 30px;
+    }
+
+    .nav-container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .header .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .align-items-center {
+      align-items: center;
+    }
+
+    .justify-content-between {
+      justify-content: space-between;
+    }
+
+    .header {
+      background-color: var(--color-1);
+      padding: 12px 0;
+      line-height: 1.5;
+    }
+
+    .header .logo,
+    .header .nav {
+      padding: 0 15px;
+    }
+
+    .logo {
+      height: 70px;
+    }
+
+    .header .header-link {
+      font-size: 30px;
+      color: #ffffff;
+      text-transform: capitalize;
+    }
+
+    .header .nav ul li {
+      display: inline-block;
+      position: relative;
+      margin-left: 40px;
+    }
+
+    .header .nav ul li a {
+      display: block;
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      padding: 10px 0;
+      transition: all 0.5s ease;
+      text-align: center;
+      font-size: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .header {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .header .nav ul li a.active,
+    .header .nav ul li a:hover {
+      color: #f3a93d;
+      transform: translateY(-5px);
+    }
+
+    
+    .header .nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: var(--color-1);
+      top: 100%;
+      left: 0;
+      width: 200px;
+      z-index: 1000;
+    }
+
+    .header .nav ul li:hover ul {
+      display: block;
+    }
+
+    .header .nav ul li ul li {
+      display: block;
+      margin: 0;
+    }
+
+    .header .nav ul li ul li a {
+      padding: 10px 15px;
+      text-align: left;
+    }
+
+    .header .nav ul li ul li a:hover {
+      background-color: #f3a93d;
+      color: #000000;
+    }
+
+    .dropdown-items {
+      text-align: center !important;
+    }
+
+ 
+    .nav-toggler {
+      height: 34px;
+      width: 44px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+      display: none;
+      margin-right: 15px;
+    }
+
+    .nav-toggler:focus {
+      outline: none;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-toggler span {
+      height: 2px;
+      width: 20px;
+      background-color: var(--color-1);
+      display: block;
+      margin: auto;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-toggler.active span {
+      background-color: transparent;
+    }
+
+    .nav-toggler span::before,
+    .nav-toggler span::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-1);
+      transition: all 0.3s ease;
+    }
+
+    .nav-toggler span::before {
+      transform: translateY(-6px);
+    }
+
+    .nav-toggler.active span::before {
+      transform: rotate(45deg);
+    }
+
+    .nav-toggler span::after {
+      transform: translateY(6px);
+    }
+
+    .nav-toggler.active span::after {
+      transform: rotate(135deg);
+    }
+
+    .header .nav.open {
+      visibility: visible !important;
+      max-height: 1000px !important;
+      transition: max-height 0.5s ease-in;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media(max-width: 991px) {
+      .nav-toggler {
+        display: block;
+      }
+
+      .header .nav {
+        width: 100%;
+        padding: 0;
+        max-height: 0px;
+        overflow: hidden;
+        visibility: hidden;
+        transition: all 0.5s ease;
+      }
+
+      .header .nav.open {
+        visibility: visible;
+      }
+
+      .header .nav ul {
+        padding: 12px 15px 0;
+        margin-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .header .nav ul li {
+        display: block !important;
+        visibility: visible !important;
+      }
+
+      .header .nav ul li ul {
+        position: static !important;
+      }
+    }
+
+
+
+
+
+    /*navbar css end*/
+    /*hotel start*/
+    .book-input {
+      padding: 5px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .book-now-btn {
+      background-color: #f3a93d;
+      font-size: 1rem;
+      font-family: 'Times New Roman', Times, serif;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #000;
+      border-radius: 5px;
+    }
+
+    .book-now-btn:hover {
+      background-color: #000;
+      color: #f3a93d;
+    }
+
+    .main-img-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .main-img-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.493);
+      z-index: 1;
+    }
+
+    .main-img {
+      width: 100%;
+      height: 550px;
+      display: block;
+    }
+
+    .check-availability {
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      text-align: center;
+      z-index: 1;
+      box-shadow: 0px 0px 20px rgba(255, 166, 0, 0.699);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 10%;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transition: transform 0.5s ease;
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+    }
+
+    .image-container:hover img,
+    .image-container:hover .image-overlay {
+      transform: scale(1.15);
+      opacity: 1;
+
+    }
+
+    .image-1 {
+      width: 200px;
+      height: 300px;
+    }
+
+    .image-2 {
+      width: 400px;
+      height: 150px;
+    }
+
+    .image-3 {
+      width: 400px;
+      height: 140px;
+      order: 1;
+      margin-top: -150px;
+      margin-left: 210px;
+    }
+
+    .image-4 {
+      width: 200px;
+      height: 300px;
+      order: 1;
+      margin-top: -320px;
+      margin-left: 78.8%;
+    }
+
+    @media (max-width: 1200px) {
+      .gallery {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 20%;
+      }
+
+      .image-container {
+        width: 40%;
+        height: 250px;
+      }
+
+      .image-3,
+      .image-4 {
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 20%;
+      }
+
+      .image-container {
+        width: 100%;
+        height: 200px;
+      }
+
+      .image-3,
+      .image-4 {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        flex-direction: column;
+        width: 90%;
+        margin-top: 20%;
+      }
+
+      .image-container {
+        width: 100%;
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .gallery {
+        flex-direction: column;
+        width: 90%;
+        margin-top: 45%;
+      }
+
+    }
+
+    /*gallery end*/
+    /*price start*/
+
+    .pricing-section {
+      padding: 50px 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    #hotel-heading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      font-weight: 600;
+      margin: 4rem 0%;
+      color: #f3a93d;
+      text-shadow: 3px 3px 0px black, 3px 3px 0px black, 3px 3px 0px black, 3px 3px 0px black;
+      animation: fadeInUp 1s ease-out;
+      font-style: italic;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+
+    .pricing-steps {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .pricing-step {
+      background: #2a2a2a;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      transition: transform 0.4s, border 0.4s, box-shadow 0.4s;
+      cursor: pointer;
+      border: 5px solid transparent;
+    }
+
+    .pricing-step:focus,
+    .pricing-step:active {
+      transform: scale(1.1) rotate(10deg);
+      border: 5px solid #ffa500;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+      outline: none;
+    }
+
+    .pricing-step::before {
+      content: '';
+      background: #ffa500;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .pricing-step h3 {
+      color: #ffcc00;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .pricing-step p {
+      color: #fff;
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    .pricing-step small {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .pricing-step:hover {
+      transform: scale(1.1) rotate(10deg);
+    }
+
+    .pricing-step::before {
+      content: '';
+      background: #ffa500;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .pricing-step:focus h3,
+    .pricing-step:active h3 {
+      color: #fff;
+    }
+
+    .pricing-step:focus p,
+    .pricing-step:active p {
+      color: #ffa500;
+    }
+
+    /*price end*/
+    /*hotel form css start*/
+
+    .booking-section {
+      margin: 100px 0px;
+      background-image: url("../assest/bg-hotel.jpg");
+      background-size: cover;
+      border: 2px solid grey;
+      padding: 50px;
+    }
+
+    .booking-form {
+      width: 50%;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border: 2px solid rgba(187, 187, 187, 0.904);
+      border-radius: 10px;
+      box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.363);
+    }
+
+    .booking-form h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #fda92a;
+    }
+
+    .booking-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    input {
+      color: #f3a93d;
+    }
+
+    textarea {
+      color: #f3a93d;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .booking-form input:hover,
+    .booking-form select:hover,
+    .booking-form textarea:hover {
+      border-color: #f3a93d;
+      box-shadow: 0 0 5px rgba(243, 169, 61, 0.5);
+    }
+
+    .booking-form input:focus,
+    .booking-form select:focus,
+    .booking-form textarea:focus {
+      outline: none;
+      border-color: #000000;
+      box-shadow: 0 20 10px #f3a93d;
+    }
+
+    .booking-form button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background-color: #f3a93d;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .booking-form button:hover {
+      background-color: #000000;
+      transform: scale(1.05);
+    }
+
+
+    .booking-form button:focus {
+      outline: none;
+      background-color: #000000;
+      box-shadow: 0 0px 10px #000
+    }
+
+
+
+    .booking-form {
+      width: 50%;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .booking-form:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0px 10px #f3a93d;
+    }
+
+    @media (max-width: 992px) {
+      .booking-form {
+        width: 70%;
+        padding: 1.5rem;
+      }
+
+      .booking-form h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .booking-form {
+        width: 90%;
+        padding: 1.2rem;
+      }
+
+      .booking-form h2 {
+        font-size: 1.6rem;
+      }
+
+      .booking-form label {
+        font-size: 1.2rem;
+      }
+
+      .booking-form button {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .booking-section {
+        padding: 20px;
+      }
+
+      .booking-form {
+        width: 100%;
+        padding: 1rem;
+        box-shadow: none;
+      }
+
+      .booking-form h2 {
+        font-size: 1.4rem;
+      }
+
+      .booking-form label {
+        font-size: 1rem;
+      }
+
+      .booking-form input,
+      .booking-form select,
+      .booking-form textarea {
+        padding: 0.5rem;
+      }
+
+      .booking-form button {
+        padding: 8px;
+        font-size: 1rem;
+      }
+    }
+
+    /*end*/
+    /*images css start*/
+    .main-section {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      height: 45vh;
+      border: 2px solid #000;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #fff;
+      margin: 70px auto;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .main-section:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 10px 20px rgba(255, 210, 11, 0.753), 0px 5px 20px rgba(0, 0, 0, 0.904);
+    }
+
+    .image-box-container {
+      flex: 1;
+      background-color: #ddd;
+    }
+
+    .text-box-container {
+      font-size: 1.3rem;
+      flex: 1;
+      background-color: #000000fa;
+      color: #8d8c8c;
+      padding: 20px;
+      padding-left: 30px;
+      line-height: 1.2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-box-container:hover {
+      color: #a1a1a1;
+    }
+
+    .imagebox-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-box-heading {
+      color: #f3a93d;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .main-section {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+      }
+
+      .imagebox-img {
+        height: auto;
+      }
+
+      .text-box-container {
+        font-size: 1.1rem;
+        padding: 15px;
+      }
+
+      .image-box-heading {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-section {
+        width: 100%;
+        margin: 20px auto;
+      }
+
+      .text-box-container {
+        font-size: 1rem;
+        padding: 10px;
+      }
+
+      .image-box-heading {
+        font-size: 28px;
+      }
+    }
+
+    /*images css end*/
+
+
+    /*hotel form css end*/
+    /* Footer css start */
+    footer {
+      clear: both;
+      box-shadow: 0 4px 12px #f3a93d;
+    }
+
+    .footer-container {
+      background-color: black;
+      width: 100%;
+      padding: 40px 100px;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px #f3a93d;
+    }
+
+    .footer-container .row {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+    }
+
+    .footer-container-col ul {
+      list-style: none;
+    }
+
+    .footer-container-col h4 {
+      color: #ffffff;
+      margin-bottom: 25px;
+      font-size: 22px;
+      position: relative;
+    }
+
+    .footer-container-col h4::before {
+      content: '';
+      width: 70px;
+      height: 2px;
+      position: absolute;
+      background-color: #f3a93d;
+      bottom: -10px;
+    }
+
+    h4:hover {
+      color: #f3a93d!important;
+      cursor: pointer;
+    }
+
+    .footer-container-col ul li {
+      padding: 5px 0;
+    }
+
+    .footer-container-col ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      opacity: 0.7;
+      transition: 0.5s;
+    }
+
+    .footer-container-col ul li a:hover {
+      opacity: 1;
+      color: #f3a93d;
+    }
+
+    #footer-para {
+      color: #ffffffb9;
+      font-size: 15px;
+      line-height: 21px;
+    }
+
+    .footer-container-col input {
+      border: none;
+      width: 250px;
+      height: 45px;
+      display: block;
+      padding-left: 20px;
+      margin: 14px 0;
+      background-color: #000;
+      border: 2px solid #f3a93d;
+    }
+
+    .Newsletter-input {
+      color: #f3a93d;
+    }
+
+    .footer-container-col .inputSubmit {
+      padding: 0px 20px;
+      background-color: #f3a93d;
+      border: none;
+      color: #ffffff;
+    }
+
+    .col p {
+      color: #ffffff;
+    }
+
+    .row hr {
+      opacity: 0.7;
+    }
+
+    .row .socialIcons i {
+      display: inline-block;
+      color: #ffffff;
+      font-size: 25px;
+      margin: 20px 15px;
+      transition: 0.5s;
+    }
+
+    .row .socialIcons i:hover {
+      color: #f3a93d;
+    }
+
+
+    @media (max-width: 600px) {
+      footer .row {
+        flex-direction: column;
+        padding: 20px 30px;
+      }
+
+      footer .footer-container-col ul {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .footer-container-col input {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      footer .row {
+        flex-direction: column;
+        padding: 10px 15px;
+      }
+
+      footer .footer-container {
+        padding: 20px;
+      }
+
+      footer .footer-container-col ul {
+        margin-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .footer-container-col input {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .footer-container-col h4 {
+        font-size: 18px;
+      }
+
+      .footer-container-col ul li a {
+        font-size: 14px;
+      }
+
+      .row .socialIcons i {
+        font-size: 20px;
+        margin: 15px 10px;
+      }
+    }
+
+    @media (max-width: 300px) {
+      footer .row {
+        flex-direction: column;
+        padding: 5px 10px;
+      }
+
+      footer .footer-container {
+        padding: 15px;
+      }
+
+      footer .footer-container-col ul {
+        margin-left: 5px;
+        margin-bottom: 10px;
+      }
+
+      .footer-container-col input {
+        width: 100%;
+        margin: 5px 0;
+      }
+
+      .footer-container-col h4 {
+        font-size: 16px;
+      }
+
+      .footer-container-col ul li a {
+        font-size: 12px;
+      }
+
+      .row .socialIcons i {
+        font-size: 18px;
+        margin: 10px 5px;
+      }
+    }
+
+    /*Footer css end*/
+    /*animation start*/
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /*animation end*/
+    /* Fullscreen Loader */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle, #000 30%, #333 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+      overflow: hidden;
+    }
+
+    .loading-text {
+      font-size: 2rem;
+      color: #f3a93d;
+      margin-top: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      animation: text-blink 1.5s infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes text-blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .ring {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      animation: rotateRing 1.5s linear infinite;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      background-color: #f3a93d;
+      border-radius: 50%;
+      position: absolute;
+      box-shadow: 0 0 20px rgba(243, 169, 61, 0.9);
+      animation: glowing 1.5s infinite alternate;
+    }
+
+    .circle:nth-child(1) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .circle:nth-child(2) {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .circle:nth-child(3) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .circle:nth-child(4) {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @keyframes rotateRing {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 15px rgba(243, 170, 61, 0.878), 0 0 30px rgba(243, 169, 61, 0.6);
+      }
+
+      100% {
+        box-shadow: 0 0 40px rgba(251, 172, 55, 0.954), 0 0 80px rgba(243, 169, 61, 0.8);
+      }
+    }
+
+    .loader.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+  </div>
+  <!--loader end-->
+
+  <!--navbar start-->
+  <header class="header">
+    <div class="nav-container">
+      <div class="row align-items-center justify-content-between">
+        <div class="logo">
+          <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+        </div>
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+            <li class="dropdown">
+              <a class="header-link" href="../bolg.html">Blog </a>
+            </li>
+            <li class="dropdown">
+              <a class="header-link" href="#" style="color: #f3a93d;border-bottom:2px solid #f3a93d">Services <i
+                  class="fas fa-chevron-down" style="font-size: 1rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-items" href="./hotel.html"> Hotel Booking</a></li>
+                <li><a class="dropdown-items" href="./ticket.html"> Ticket Booking</a></li>
+                <li><a class="dropdown-items" href="./Train.html">Train Booking</a></li>
+                <li><a class="dropdown-items" href="./Packages.html">Tour packages</a></li>
+              </ul>
+            </li>
+            <li><a class="header-link" href="../About.html">About</a></li>
+            <li><a class="header-link" href="../Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--navbar end-->
+
+  <!--hotel start-->
+  <div class="main-img-container">
+    <img class="main-img" src="../assest/big-hotel.jpg" alt="main-hotel">
+    <div class="check-availability">
+      <h2>Book Your Stay</h2>
+      <form>
+        <input class="book-input" type="date" placeholder="Check-in Date">
+        <input class="book-input" type="date" placeholder="Check-out Date">
+        <input class="book-input" type="number" placeholder="Guests" min="1">
+        <br>
+        <button type="submit" class="book-now-btn">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+
+  <section>
+    <div class="gallery">
+      <div class="image-container image-1">
+        <img src="../assest/room1.jpg" alt="Dinner Room">
+        <div class="image-overlay">Suites</div>
+      </div>
+      <div class="image-container image-2">
+        <img src="../assest/restaurant1.jpg" alt="Meeting Room">
+        <div class="image-overlay">Restaurant</div>
+      </div>
+      <div class="image-container image-3">
+        <img src="../assest/meeting1.jpg" alt="Conference Hall">
+        <div class="image-overlay">Meeting Room</div>
+      </div>
+      <div class="image-container image-4">
+        <img src="../assest/swiming1.webp" alt="Party Hall">
+        <div class="image-overlay">Swimming Pool</div>
+      </div>
+    </div>
+  </section>
+
+  <!--price start-->
+  <section class="pricing-section reveal">
+    <h2 id="hotel-heading">Hotel Room Price Range</h2>
+    <div class="pricing-steps">
+      <div class="pricing-step" tabindex="0">
+        <div>
+          <h3>Luxury Suite</h3>
+          <p>$500 - $800</p>
+          <small>Ultimate Comfort</small>
+        </div>
+      </div>
+      <div class="pricing-step" tabindex="0">
+        <div>
+          <h3>Deluxe Room</h3>
+          <p>$300 - $500</p>
+          <small>Elegant & Spacious</small>
+        </div>
+      </div>
+      <div class="pricing-step" tabindex="0">
+        <div>
+          <h3>Standard Room</h3>
+          <p>$200 - $300</p>
+          <small>Cozy & Affordable</small>
+        </div>
+      </div>
+      <div class="pricing-step" tabindex="0">
+        <div>
+          <h3>Family Suite</h3>
+          <p>$400 - $600</p>
+          <small>Perfect for Families</small>
+        </div>
+      </div>
+      <div class="pricing-step" tabindex="0">
+        <div>
+          <h3>Penthouse</h3>
+          <p>$1000 - $1500</p>
+          <small>Luxury & Privacy</small>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--price end-->
+  <!--hotel form start -->
+  <section class="booking-section reveal">
+    <div class="booking-form">
+      <h2>Hotel Booking Form</h2>
+      <form> <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+        <label for="check-in">Check-in Date:</label>
+        <input type="date" id="check-in" name="check-in" required>
+        <label for="check-out">Check-out Date:</label>
+        <input type="date" id="check-out" name="check-out" required>
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests" min="1" required> <label for="room-type">Room Type:</label>
+        <select id="room-type" name="room-type" required>
+          <option value="suites">Suites</option>
+          <option value="dining-room">Dining Room</option>
+          <option value="meeting-room">Meeting Room</option>
+          <option value="swimming-pool">Swimming Pool</option>
+        </select>
+        <label for="special-requests">Special Requests:</label>
+        <textarea id="special-requests" name="special-requests" placeholder="Any special requests..."
+          rows="4"></textarea> <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </section>
+  <!--hotel form end-->
+  <!--main image box start-->
+  <div class="main-section reveal">
+    <div class="image-box-container">
+      <img class="imagebox-img" src="../assest/hotel.jpg" alt="Hotel Image">
+    </div>
+    <div class="text-box-container">
+      <h1 class="image-box-heading">Discover Your Perfect Stay</h1>
+      <p>
+        Enjoy the perfect blend of luxury and affordability with our exclusive range of hotels. Indulge in unparalleled
+        comfort and elegance at our luxury hotels. For budget-conscious travelers, we offer charming options that ensure
+        a delightful stay without compromising on quality.
+        <strong>Our curated selection guarantees a memorable experience.</strong> Book today and discover your ideal
+        retreat!
+      </p>
+    </div>
+  </div>
+  <!--main image box end-->
+  <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <!-- 2nd Column -->
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="">Contact Us</a></li>
+
+          </ul>
+        </div>
+
+        <!-- 3rd Column -->
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="./services/hotel.html">Hotel Booking</a></li>
+            <li><a href="./ticket.html">Ticket Booking</a></li>
+            <li><a href="./Rail.html"> Rail Booking</a></li>
+            <li><a href="./Packages.html"> Tour Pakages</a></li>
+
+
+          </ul>
+        </div>
+        <!-- 3th Column -->
+        <!--4th column-->
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> 360 539 0604</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+
+  <!-- <script src="./script.js"></script> -->
+  <script>
+    //toogle js code start
+    const navToggler = document.querySelector(".nav-toggler");
+    navToggler.addEventListener("click", navToggle);
+
+    function navToggle() {
+      navToggler.classList.toggle("active");
+      const nav = document.querySelector(".nav");
+      nav.classList.toggle("open");
+      if (nav.classList.contains("open")) {
+        nav.style.maxHeight = nav.scrollHeight + "px";
+      }
+      else {
+        nav.removeAttribute("style");
+      }
+    }
+    //toogle js code end
+    //loader js
+    window.addEventListener('load', function () {
+      const loader = document.querySelector('.loader');
+      loader.classList.add('fade-out');
+    });
+    //loader js end
+    //animation start
+
+    const reveal = () => document.querySelectorAll(".reveal")
+      .forEach(el => el.classList.toggle("active", el.getBoundingClientRect().top < window.innerHeight - 50));
+
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("load", reveal);
+    //animation end
+
+  </script>
+
+</body>
+
+</html>
+</body>
+
+</html>

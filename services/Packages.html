@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Package Card</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --color-1: #000000;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f8f8f8;
+            scroll-behavior: smooth;
+            opacity: 0;
+            animation: fadeInPage 1s forwards;
+        }
+
+        @keyframes fadeInPage {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        .nav-container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .header .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .justify-content-between {
+            justify-content: space-between;
+        }
+
+        .header {
+            background-color: var(--color-1);
+            padding: 12px 0;
+            line-height: 1.5;
+        }
+
+        .header .logo,
+        .header .nav {
+            padding: 0 15px;
+        }
+
+        .logo {
+            height: 70px;
+        }
+
+        .header .header-link {
+            font-size: 30px;
+            color: #ffffff;
+            text-transform: capitalize;
+        }
+
+        .header .nav ul li {
+            display: inline-block;
+            position: relative;
+            margin-left: 40px;
+        }
+
+        .header .nav ul li a {
+            display: block;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            padding: 10px 0;
+            transition: all 0.5s ease;
+            text-align: center;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .header {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .header .nav ul li a.active,
+        .header .nav ul li a:hover {
+            color: #f3a93d;
+            transform: translateY(-5px);
+        }
+
+        /* Dropdown Menu */
+        .header .nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: var(--color-1);
+            top: 100%;
+            left: 0;
+            width: 200px;
+            z-index: 1000;
+        }
+
+        .header .nav ul li:hover ul {
+            display: block;
+        }
+
+        .header .nav ul li ul li {
+            display: block;
+            margin: 0;
+        }
+
+        .header .nav ul li ul li a {
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        .header .nav ul li ul li a:hover {
+            background-color: #f3a93d;
+            color: #000000;
+        }
+
+        .dropdown-items {
+            text-align: center !important;
+        }
+
+      
+        .nav-toggler {
+            height: 34px;
+            width: 44px;
+            background-color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            display: none;
+            margin-right: 15px;
+        }
+
+        .nav-toggler:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .nav-toggler span {
+            height: 2px;
+            width: 20px;
+            background-color: var(--color-1);
+            display: block;
+            margin: auto;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggler.active span {
+            background-color: transparent;
+        }
+
+        .nav-toggler span::before,
+        .nav-toggler span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggler span::before {
+            transform: translateY(-6px);
+        }
+
+        .nav-toggler.active span::before {
+            transform: rotate(45deg);
+        }
+
+        .nav-toggler span::after {
+            transform: translateY(6px);
+        }
+
+        .nav-toggler.active span::after {
+            transform: rotate(135deg);
+        }
+
+        .header .nav.open {
+  visibility: visible !important;
+  max-height: 1000px !important; 
+  transition: max-height 0.5s ease-in;
+  display: flex;
+  justify-content: center;
+}
+@media(max-width: 991px) {
+            .nav-toggler {
+                display: block;
+            }
+
+            .header .nav {
+                width: 100%;
+                padding: 0;
+                max-height: 0px;
+                overflow: hidden;
+                visibility: hidden;
+                transition: all 0.5s ease;
+            }
+
+            .header .nav.open {
+                visibility: visible;
+            }
+
+            .header .nav ul {
+                padding: 12px 15px 0;
+                margin-top: 12px;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .header .nav ul li {
+                display: block !important;
+                visibility: visible !important;
+            }
+
+            .header .nav ul li ul {
+                position: static !important;
+            }
+        }
+
+
+        /*navbar css end*/
+        /*main text container start*/
+        .main-text-container {
+            background: url('../assest/new-main-mountains.avif') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-text-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .hero-section {
+            color: white;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .short-text {
+            color: #f3a93d;
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateX(100px);
+            animation: slideIn 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .text-heading {
+            font-size: 4rem;
+            color: white;
+            margin-top: 0;
+            margin-bottom: 15px;
+            position: relative;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popular-tag {
+            background-color: #f3a93d;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            position: absolute;
+            top: -15px;
+            right: -10px;
+            animation: bounce 0.8s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .special-offer {
+            background-color: black;
+            color: #f3a93d;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: pulse 1.5s infinite;
+            margin: 20px 0 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .special-offer:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #f3a93d;
+            left: 0;
+        }
+
+        .special-offer:before {
+            top: -10px;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .special-offer:after {
+            bottom: -10px;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .special-offer:hover:before,
+        .special-offer:hover:after {
+            transform: scaleX(1);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: start;
+            flex-wrap: wrap;
+        }
+
+        .journey-btn {
+            font-size: 1.1rem;
+            background-color: #f3a93d;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .journey-btn:hover {
+            background-color: #e08d2b;
+            transform: translateY(-3px);
+        }
+
+        .explore-btn {
+            font-size: 1.1rem;
+            background-color: transparent;
+            color: #f3a93d;
+            padding: 10px 30px;
+            border: 2px solid #f3a93d;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: color 0.3s, background 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .explore-btn:hover {
+            background-color: #f3a93d;
+            color: black;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: white;
+            animation: bounceArrow 1.5s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounceArrow {
+
+            0%,
+            100% {
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                transform: translate(-50%, 10px);
+            }
+        }
+
+        /*main text container end*/
+        /* Packages CSS */
+        .whole-cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            padding: 20px;
+            margin: 40px;
+        }
+
+        .card-container {
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            display: flex;
+            background-color: white;
+            border: 1px solid rgb(190, 190, 190);
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 100%;
+            padding: 25px;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.438);
+            transform: scale(1.1);
+        }
+
+
+        .card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            /* height: 480px; */
+            height: auto;
+            width: 45%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .card-content {
+            padding: 0 20px;
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .text-yellow-500 {
+            color: #f3a93d;
+        }
+
+        .card-btn {
+            padding: 15px;
+            font-size: 0.8rem;
+            background-color: #f3a93d;
+            color: #000000;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .card-btn:hover {
+            background: #000;
+            color: #f3a93d;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+
+        .details span {
+            background: #eeeff0;
+            padding: 8px 18px;
+            border-radius: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .package-location ul {
+            list-style: disc;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .package-location ul li {
+            margin: 8px 0;
+            color: #858585;
+            font-size: 15px;
+        }
+
+        /*packages cards end*/
+
+
+
+
+        /* Footer CSS Start */
+        footer {
+            clear: both;
+            box-shadow: 0 4px 12px #f3a93d;
+        }
+
+        .footer-container {
+            background-color: black;
+            width: 100%;
+            padding: 40px 100px;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px #f3a93d;
+        }
+
+        .footer-container .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+        }
+
+        .footer-container-col ul {
+            list-style: none;
+        }
+
+        .footer-container-col h4 {
+            color: #ffffff;
+            margin-bottom: 25px;
+            font-size: 22px;
+            position: relative;
+        }
+
+        .footer-container-col h4::before {
+            content: '';
+            width: 70px;
+            height: 2px;
+            position: absolute;
+            background-color: #f3a93d;
+            bottom: -10px;
+        }
+
+        h4:hover {
+            color: #f3a93d;
+            cursor: pointer;
+        }
+
+        .footer-container-col ul li {
+            padding: 5px 0;
+        }
+
+        .footer-container-col ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        .footer-container-col ul li a:hover {
+            opacity: 1;
+            color: #f3a93d;
+        }
+
+        #footer-para {
+            color: #ffffffb9;
+            font-size: 15px;
+            line-height: 21px;
+        }
+
+        .footer-container-col input {
+            border: none;
+            width: 250px;
+            height: 45px;
+            display: block;
+            padding-left: 20px;
+            margin: 14px 0;
+            background-color: #000;
+            border: 2px solid #f3a93d;
+        }
+
+        .Newsletter-input {
+            color: #f3a93d;
+        }
+
+        .footer-container-col .inputSubmit {
+            padding: 0px 20px;
+            background-color: #f3a93d;
+            border: none;
+            color: #ffffff;
+        }
+
+        .col p {
+            color: #ffffff;
+        }
+
+        .row hr {
+            opacity: 0.7;
+        }
+
+        .row .socialIcons i {
+            display: inline-block;
+            color: #ffffff;
+            font-size: 25px;
+            margin: 20px 15px;
+            transition: 0.5s;
+        }
+
+        .row .socialIcons i:hover {
+            color: #f3a93d;
+        }
+
+
+        @media (max-width: 600px) {
+            footer .row {
+                flex-direction: column;
+                padding: 20px 30px;
+            }
+
+            footer .footer-container-col ul {
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            .footer-container-col input {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            footer .row {
+                flex-direction: column;
+                padding: 10px 15px;
+            }
+
+            footer .footer-container {
+                padding: 20px;
+            }
+
+            footer .footer-container-col ul {
+                margin-left: 10px;
+                margin-bottom: 15px;
+            }
+
+            .footer-container-col input {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .footer-container-col h4 {
+                font-size: 18px;
+            }
+
+            .footer-container-col ul li a {
+                font-size: 14px;
+            }
+
+            .row .socialIcons i {
+                font-size: 20px;
+                margin: 15px 10px;
+            }
+        }
+
+        @media (max-width: 300px) {
+            footer .row {
+                flex-direction: column;
+                padding: 5px 10px;
+            }
+
+            footer .footer-container {
+                padding: 15px;
+            }
+
+            footer .footer-container-col ul {
+                margin-left: 5px;
+                margin-bottom: 10px;
+            }
+
+            .footer-container-col input {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .footer-container-col h4 {
+                font-size: 16px;
+            }
+
+            .footer-container-col ul li a {
+                font-size: 12px;
+            }
+
+            .row .socialIcons i {
+                font-size: 18px;
+                margin: 10px 5px;
+            }
+        }
+
+        /* Footer CSS End */
+
+        /*Footer css end*/
+        /* Fullscreen Loader */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle, #000 30%, #333 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+            overflow: hidden;
+
+        }
+
+        .loading-text {
+            font-size: 2rem;
+            color: #f3a93d;
+            margin-top: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: text-blink 1.5s infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes text-blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .ring {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            animation: rotateRing 1.5s linear infinite;
+        }
+
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            background-color: #f3a93d;
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0 0 20px rgba(243, 169, 61, 0.9);
+            animation: glowing 1.5s infinite alternate;
+        }
+
+        .circle:nth-child(1) {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .circle:nth-child(2) {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .circle:nth-child(3) {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .circle:nth-child(4) {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @keyframes rotateRing {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 15px rgba(243, 170, 61, 0.878), 0 0 30px rgba(243, 169, 61, 0.6);
+            }
+
+            100% {
+                box-shadow: 0 0 40px rgba(251, 172, 55, 0.954), 0 0 80px rgba(243, 169, 61, 0.8);
+            }
+        }
+
+        .loader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!--loader start-->
+    <div class="loader">
+        <div class="ring">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="loading-text">Loading...</div>
+    </div>
+    <!--loader end-->
+    <!--navbar start-->
+    <header class="header">
+        <div class="nav-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a class="header-link" href="./index.html" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a class="header-link" href="./bolg.html">Blog </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="header-link" href="#">Services <i class="fas fa-chevron-down"
+                                    style="font-size: 1rem;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-items" href="./hotel.html"> Hotel Booking</a></li>
+                                <li><a class="dropdown-items" href="./ticket.html"> Ticket Booking</a></li>
+                                <li><a class="dropdown-items" href="./Train.html">Train Booking</a></li>
+                                <li><a class="dropdown-items" href="./Packages.html">Tour packages</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="header-link" href="../About.html">About</a></li>
+                        <li><a class="header-link" href="../Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--navbar end-->
+    <!--Main text conatiner start-->
+    <div class="main-text-container ">
+        <div class="hero-section">
+            <div class="popular-tag">Trending</div>
+            <h3 class="short-text">Book Your Tour Packages Now!</h3>
+            <h1 class="text-heading">Tour Packages</h1>
+            <span class="special-offer">Hurry! Special Offer Available</span>
+            <div class="buttons">
+                <a href="#" class="journey-btn">Start Your Journey</a>
+                <a href="#" class="explore-btn">Explore More</a>
+            </div>
+        </div>
+        <div class="scroll-down">↓</div>
+    </div>
+    <!--Main text conatiner end-->
+    <div class="whole-cards">
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/Rio de Janeiro1.jpg" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Family Package 12 Night/13 Days - Rio de Janeiro</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$1200.00</span>
+                    <p class="card-text">Experience the best of Rio de Janeiro with our family package! Enjoy
+                        beautiful beaches, explore vibrant local streets, indulge in delicious cuisine, and spend
+                        memorable moments on the sea.</p>
+                    <div class="details">
+                        <span>Available Tickets: 48</span>
+                        <span>Start Date: 20.11.2022</span>
+                        <span>End Date: 02.12.2022</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>13 Days in Rio, Brazil</li>
+                            <li>12 Breakfasts & Dinners</li>
+                            <li>First-Class Sightseeing Tours</li>
+                            <li>Exclusive Beachfront Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/paris pack 1.avif" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Romantic Getaway 7 Night/8 Days - Paris</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$1500.00</span>
+                    <p class="card-text">Discover the city of love with your special someone! Enjoy romantic
+                        dinners, scenic views, and unforgettable moments in Paris.</p>
+                    <div class="details">
+                        <span>Available Tickets: 48</span>
+                        <span>Start Date: 20.11.2022</span>
+                        <span>End Date: 08.12.2022</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in Paris, France</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Romantic Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/kenya.webp" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Adventure Package 5 Night/6 Days - Safari in Kenya</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$1800.00</span>
+                    <p class="card-text">Embark on a thrilling safari adventure in Kenya! Get up close with
+                        wildlife, explore the African savannah, and enjoy guided tours of Kenya’s stunning
+                        landscapes.</p>
+                    <div class="details">
+                        <span>Available Tickets: 30</span>
+                        <span>Start Date: 15.09.2023</span>
+                        <span>End Date: 21.09.2023</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>6 Days in Kenya</li>
+                            <li>5 Breakfasts & Dinners</li>
+                            <li>Safari Wildlife Tour</li>
+                            <li>Luxury Tent Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/new zealand 1.jpeg" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Adventure & Romance 7 Nights/8 Days - New Zealand</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$1800.00</span>
+                    <p class="card-text">Experience the breathtaking landscapes and adventures of New Zealand with your
+                        loved one! Enjoy thrilling activities, serene views, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 50</span>
+                        <span>Start Date: 15.03.2023</span>
+                        <span>End Date: 23.03.2023</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in New Zealand</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Adventure Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/japan1.jpg" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Cultural & Scenic 7 Nights/8 Days - Japan</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$1700.00</span>
+                    <p class="card-text">Explore the rich culture and stunning landscapes of Japan with your loved one!
+                        Enjoy historical tours, scenic views, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 45</span>
+                        <span>Start Date: 01.04.2023</span>
+                        <span>End Date: 09.04.2023</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in Japan</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Cultural Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/maldives1.jpg" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Beach Paradise 7 Nights/8 Days - Maldives</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$2000.00</span>
+                    <p class="card-text">Immerse yourself in the crystal-clear waters and sandy beaches of the Maldives
+                        with your loved one! Enjoy beach activities, serene views, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 40</span>
+                        <span>Start Date: 10.05.2023</span>
+                        <span>End Date: 18.05.2023</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in the Maldives</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Beach Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/hawai1.webp" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Island Escape 7 Nights/8 Days - Hawaii</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$2100.00</span>
+                    <p class="card-text">Immerse yourself in the tropical paradise and stunning beaches of Hawaii with
+                        your loved one! Enjoy beach activities, serene views, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 35</span>
+                        <span>Start Date: 05.08.2023</span>
+                        <span>End Date: 13.08.2023</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in Hawaii</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Beach Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/Morocco1.jpg" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Cultural & Exotic 7 Nights/8 Days - Morocco</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$1700.00</span>
+                    <p class="card-text">Experience the vibrant culture and stunning landscapes of Morocco with your
+                        loved one! Enjoy cultural tours, scenic views, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 42</span>
+                        <span>Start Date: 15.07.2023</span>
+                        <span>End Date: 23.07.2023</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in Morocco</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Cultural Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/Egypt1.jpg" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Historical Adventure 7 Nights/8 Days - Egypt</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$1600.00</span>
+                    <p class="card-text">Explore the ancient wonders and rich history of Egypt with your loved one!
+                        Enjoy cultural tours, scenic views, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 47</span>
+                        <span>Start Date: 01.06.2023</span>
+                        <span>End Date: 09.06.2023</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in Egypt</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Historical Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/greece1.jpg" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Cultural & Scenic 7 Nights/8 Days - Greece</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$1800.00</span>
+                    <p class="card-text">Explore the ancient wonders and stunning landscapes of Greece with your loved
+                        one! Enjoy cultural tours, scenic views, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 43</span>
+                        <span>Start Date: 10.09.2023</span>
+                        <span>End Date: 18.09.2023</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in Greece</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Cultural Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/New York 1.avif" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">City Adventure 7 Nights/8 Days - New York</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$2200.00</span>
+                    <p class="card-text">Immerse yourself in the vibrant energy and iconic landmarks of New York City
+                        with your loved one! Enjoy city tours, cultural experiences, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 38</span>
+                        <span>Start Date: 01.10.2023</span>
+                        <span>End Date: 09.10.2023</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in New York</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive City Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/Murree1.jpg" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Hill Station Retreat 7 Nights/8 Days - Murree</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$1300.00</span>
+                    <p class="card-text">Escape to the serene hill station of Murree with your loved one! Enjoy the lush
+                        greenery, cool weather, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 50</span>
+                        <span>Start Date: 20.12.2023</span>
+                        <span>End Date: 28.12.2023</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in Murree</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Hill Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/kalam1.jpg" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Nature Retreat 7 Nights/8 Days - Kalam</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$1400.00</span>
+                    <p class="card-text">Discover the breathtaking beauty and serene landscapes of Kalam with your loved
+                        one! Enjoy nature walks, scenic views, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 48</span>
+                        <span>Start Date: 15.01.2024</span>
+                        <span>End Date: 23.01.2024</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in Kalam</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Nature Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assest/switziland1.jpeg" alt="Travel Image">
+                <div class="card-content">
+                    <h2 class="card-title">Alpine Adventure 7 Nights/8 Days - Switzerland</h2>
+                    <span class="text-yellow-500 text-lg">★★★★☆</span>
+                    <span class="text-gray-600 ml-2">$2200.00</span>
+                    <p class="card-text">Experience the majestic beauty and serene landscapes of Switzerland with your
+                        loved one! Enjoy scenic views, winter sports, and unforgettable moments.</p>
+                    <div class="details">
+                        <span>Available Tickets: 40</span>
+                        <span>Start Date: 20.03.2024</span>
+                        <span>End Date: 28.03.2024</span>
+                    </div>
+                    <div class="package-location">
+                        <h4>Package Location</h4>
+                        <ul>
+                            <li>8 Days in Switzerland</li>
+                            <li>7 Breakfasts & Dinners</li>
+                            <li>Exclusive Alpine Tours</li>
+                            <li>Luxurious Accommodation</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="card-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Start -->
+    <footer>
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-container-col">
+                    <h4>About Us</h4>
+                    <ul style="width: 300px;">
+                        <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your
+                            needs and
+                            preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and
+                            memorable
+                            journey. Let us handle the details for you, making every trip unforgettable.</p>
+                    </ul>
+                </div>
+
+                <!-- 2nd Column -->
+                <div class="footer-container-col">
+                    <h4>Quik Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./bolg.html">Blogs</a></li>
+                        <li><a href="./About.html">About Us</a></li>
+                        <li><a href="">Contact Us</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- 3rd Column -->
+                <div class="footer-container-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="./services/hotel.html">Hotel Booking</a></li>
+                        <li><a href="./ticket.html">Ticket Booking</a></li>
+                        <li><a href="./Rail.html"> Rail Booking</a></li>
+                        <li><a href="./Packages.html"> Tour Pakages</a></li>
+                    </ul>
+                </div>
+                <!-- 3th Column -->
+                <!--4th column-->
+                <div class="footer-container-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-phone"></i> 360 539 0604</a></li>
+                        <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                travelmaster@gmail.com</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="footer-container-col">
+                    <h4>Newsletter</h4>
+                    <form action="">
+                        <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+                        <input class="Newsletter-input" type="email" placeholder="Enter Company Email"
+                            class="inputEmail" required>
+                        <input type="submit" value="Submit" class="inputSubmit">
+                    </form>
+                </div>
+            </div>
+            <hr style="margin-top: 30px;">
+            <div class="row">
+                <div class="col">
+                    <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+                </div>
+                <div class="socialIcons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--footer end-->
+    <script>
+        //toogle js code start
+        const navToggler = document.querySelector(".nav-toggler");
+        navToggler.addEventListener("click", navToggle);
+
+        function navToggle() {
+            navToggler.classList.toggle("active");
+            const nav = document.querySelector(".nav");
+            nav.classList.toggle("open");
+            if (nav.classList.contains("open")) {
+                nav.style.maxHeight = nav.scrollHeight + "px";
+            }
+            else {
+                nav.removeAttribute("style");
+            }
+        }
+        //toogle js code end
+        //loader start
+        window.addEventListener('load', function () {
+            const loader = document.querySelector('.loader');
+            loader.classList.add('fade-out');
+        });
+        //loader end
+
+        //animation js start
+        window.onscroll = () =>
+            document.querySelectorAll(".card").forEach(card =>
+                card.classList.toggle("animate", card.getBoundingClientRect().top < window.innerHeight && card.getBoundingClientRect().bottom > 0)
+            );
+        //animation js end
+
+    </script>
+
+</body>
+
+</html>

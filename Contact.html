@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --color-1: #000000;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f8f8f8;
+            scroll-behavior: smooth;
+            opacity: 0;
+            animation: fadeInPage 1s forwards;
+        }
+
+        @keyframes fadeInPage {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        .nav-container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .header .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .justify-content-between {
+            justify-content: space-between;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--color-1);
+            padding: 12px 0;
+            line-height: 1.5;
+        }
+
+        .header .logo,
+        .header .nav {
+            padding: 0 15px;
+        }
+
+        .logo {
+            height: 70px;
+        }
+
+        .header .header-link {
+            font-size: 30px;
+            color: #ffffff;
+            text-transform: capitalize;
+        }
+
+        .header .nav ul li {
+            display: inline-block;
+            position: relative;
+            margin-left: 40px;
+        }
+
+        .header .nav ul li a {
+            display: block;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            padding: 10px 0;
+            transition: all 0.5s ease;
+            text-align: center;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .header {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .header .nav ul li a.active,
+        .header .nav ul li a:hover {
+            color: #f3a93d;
+            transform: translateY(-5px);
+        }
+
+        .header .nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: var(--color-1);
+            top: 100%;
+            left: 0;
+            width: 200px;
+            z-index: 1000;
+        }
+
+        .header .nav ul li:hover ul {
+            display: block;
+        }
+
+        .header .nav ul li ul li {
+            display: block;
+            margin: 0;
+        }
+
+        .header .nav ul li ul li a {
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        .header .nav ul li ul li a:hover {
+            background-color: #f3a93d;
+            color: #000000;
+        }
+
+        .dropdown-items {
+            text-align: center !important;
+        }
+
+
+        .nav-toggler {
+            height: 34px;
+            width: 44px;
+            background-color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            display: none;
+            margin-right: 15px;
+        }
+
+        .nav-toggler:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .nav-toggler span {
+            height: 2px;
+            width: 20px;
+            background-color: var(--color-1);
+            display: block;
+            margin: auto;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggler.active span {
+            background-color: transparent;
+        }
+
+        .nav-toggler span::before,
+        .nav-toggler span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggler span::before {
+            transform: translateY(-6px);
+        }
+
+        .nav-toggler.active span::before {
+            transform: rotate(45deg);
+        }
+
+        .nav-toggler span::after {
+            transform: translateY(6px);
+        }
+
+        .nav-toggler.active span::after {
+            transform: rotate(135deg);
+        }
+
+        .header .nav.open {
+  visibility: visible !important;
+  max-height: 1000px !important; 
+  transition: max-height 0.5s ease-in;
+  display: flex;
+  justify-content: center;
+}
+@media(max-width: 991px) {
+            .nav-toggler {
+                display: block;
+            }
+
+            .header .nav {
+                width: 100%;
+                padding: 0;
+                max-height: 0px;
+                overflow: hidden;
+                visibility: hidden;
+                transition: all 0.5s ease;
+            }
+
+            .header .nav.open {
+                visibility: visible;
+            }
+
+            .header .nav ul {
+                padding: 12px 15px 0;
+                margin-top: 12px;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .header .nav ul li {
+                display: block !important;
+                visibility: visible !important;
+            }
+
+            .header .nav ul li ul {
+                position: static !important;
+            }
+        }
+
+
+        /*navbar css end*/
+        .info-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+
+        .info-card {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 250px;
+            height: 150px;
+            padding: 25px;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.658);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            margin-left: 1.8rem;
+        }
+
+        .info-card i {
+            font-size: 2em;
+            color: #000000;
+            background: linear-gradient(135deg, #f3aa3de1, #ffbe56dc);
+            padding: 15px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .info-card span {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: rgb(165, 164, 164);
+            transition: color 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-card:hover i {
+            transform: rotate(15deg) scale(1.1);
+            background: linear-gradient(135deg, #ffbe56, #f3a93d);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-card:hover span {
+            color: #f3a93d;
+            text-shadow: 0 0 12px #ffbe56;
+        }
+
+        .container {
+            background: url('./assest/contact-bg.jpeg') no-repeat center center/cover;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-top:50px;
+            padding-bottom: 20%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.815);
+            z-index: 1;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #fff;
+            padding: 20px;
+            height: 85vh;
+            margin-top: 10%;
+        }
+
+
+        .top-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .top-info .info-card {
+            width: 32%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .top-info .info-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .top-info .icon-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #c5b37f;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+
+        .contact-info {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 8%;
+        }
+
+        .contact-info .left-info {
+            width: 45%;
+        }
+
+        .contact-info h1 {
+            color: #f3a93d;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #b6b6b6;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 5px;
+            color: #f3a93d;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            color: #f3a93d;
+            font-size: 1em;
+        }
+
+        .form-group input,
+        .form-group textarea :active {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background:none;
+        }
+
+        .form-group-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px 25px;
+            background: #f3a93d;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .submit-btn:hover {
+            background: #b39e6a;
+        }
+
+
+@media screen and (max-width: 1024px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .info-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info .left-info,
+    .contact-form {
+        width: 100%;
+        max-width: 600px;
+        padding: 10px;
+    }
+
+    .form-group-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 900px), (max-width: 800px) {
+    .container {
+        height: auto;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-content {
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-container {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .info-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .contact-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-info h1 {
+        font-size: 2.5em;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    footer {
+       
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .contact-content {
+        height: auto;
+        padding: 20px;
+    }
+
+    .info-container {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .info-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .contact-info h1 {
+        font-size: 2.5em;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .contact-content {
+        padding: 15px;
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .info-card {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .contact-info h1 {
+        font-size: 2em;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9em;
+    }
+
+    .submit-btn {
+        font-size: 1em;
+        padding: 8px 20px;
+    }
+}
+
+
+        /*form end*/
+
+        /* Footer css start */
+        footer {
+            clear: both;
+            box-shadow: 0 4px 12px #f3a93d;
+        }
+
+        .footer-container {
+            background-color: black;
+            width: 100%;
+            padding: 40px 100px;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px #f3a93d;
+        }
+
+        .footer-container .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+        }
+
+        .footer-container-col ul {
+            list-style: none;
+        }
+
+        .footer-container-col h4 {
+            color: #ffffff;
+            margin-bottom: 25px;
+            font-size: 22px;
+            position: relative;
+        }
+
+        .footer-container-col h4::before {
+            content: '';
+            width: 70px;
+            height: 2px;
+            position: absolute;
+            background-color: #f3a93d;
+            bottom: -10px;
+        }
+
+        h4:hover {
+            color: #f3a93d;
+            cursor: pointer;
+        }
+
+        .footer-container-col ul li {
+            padding: 5px 0;
+        }
+
+        .footer-container-col ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        .footer-container-col ul li a:hover {
+            opacity: 1;
+            color: #f3a93d;
+        }
+
+        #footer-para {
+            color: #ffffffb9;
+            font-size: 15px;
+            line-height: 21px;
+        }
+
+        .footer-container-col input {
+            border: none;
+            width: 250px;
+            height: 45px;
+            display: block;
+            padding-left: 20px;
+            margin: 14px 0;
+            background-color: #000;
+            border: 2px solid #f3a93d;
+        }
+
+        .Newsletter-input {
+            color: #f3a93d;
+        }
+
+        .footer-container-col .inputSubmit {
+            padding: 0px 20px;
+            background-color: #f3a93d;
+            border: none;
+            color: #ffffff;
+        }
+
+        .col p {
+            color: #ffffff;
+        }
+
+        .row hr {
+            opacity: 0.7;
+        }
+
+        .row .socialIcons i {
+            display: inline-block;
+            color: #ffffff;
+            font-size: 25px;
+            margin: 20px 15px;
+            transition: 0.5s;
+        }
+
+        .row .socialIcons i:hover {
+            color: #f3a93d;
+        }
+
+
+        @media (max-width: 600px) {
+            footer .row {
+                flex-direction: column;
+                padding: 20px 30px;
+            }
+
+            footer .footer-container-col ul {
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            .footer-container-col input {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            footer .row {
+                flex-direction: column;
+                padding: 10px 15px;
+            }
+
+            footer .footer-container {
+                padding: 20px;
+            }
+
+            footer .footer-container-col ul {
+                margin-left: 10px;
+                margin-bottom: 15px;
+            }
+
+            .footer-container-col input {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .footer-container-col h4 {
+                font-size: 18px;
+            }
+
+            .footer-container-col ul li a {
+                font-size: 14px;
+            }
+
+            .row .socialIcons i {
+                font-size: 20px;
+                margin: 15px 10px;
+            }
+        }
+
+        @media (max-width: 300px) {
+            footer .row {
+                flex-direction: column;
+                padding: 5px 10px;
+            }
+
+            footer .footer-container {
+                padding: 15px;
+            }
+
+            footer .footer-container-col ul {
+                margin-left: 5px;
+                margin-bottom: 10px;
+            }
+
+            .footer-container-col input {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .footer-container-col h4 {
+                font-size: 16px;
+            }
+
+            .footer-container-col ul li a {
+                font-size: 12px;
+            }
+
+            .row .socialIcons i {
+                font-size: 18px;
+                margin: 10px 5px;
+            }
+        }
+
+
+        /*Footer css end*/
+
+
+        /* Fullscreen Loader */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle, #000 30%, #333 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+            overflow: hidden;
+        }
+
+        .loading-text {
+            font-size: 2rem;
+            color: #f3a93d;
+            margin-top: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: text-blink 1.5s infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes text-blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .ring {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            animation: rotateRing 1.5s linear infinite;
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            background-color: #f3a93d;
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0 0 20px rgba(243, 169, 61, 0.9);
+            animation: glowing 1.5s infinite alternate;
+        }
+
+        .circle:nth-child(1) {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .circle:nth-child(2) {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .circle:nth-child(3) {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .circle:nth-child(4) {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @keyframes rotateRing {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 15px rgba(243, 170, 61, 0.878), 0 0 30px rgba(243, 169, 61, 0.6);
+            }
+
+            100% {
+                box-shadow: 0 0 40px rgba(251, 172, 55, 0.954), 0 0 80px rgba(243, 169, 61, 0.8);
+            }
+        }
+
+        .loader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /*loader end*/
+        
+    </style>
+
+</head>
+
+<body>
+    <!--loader start-->
+    <div class="loader">
+        <div class="ring">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="loading-text">Loading...</div>
+    </div>
+    <!--loader end-->
+    <!--navbar start-->
+    <header class="header">
+        <div class="nav-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#"><img class="logo" src="./assest/logo.png" alt="Logo"></a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a class="header-link" href="./index.html" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a class="header-link" href="./bolg.html"
+                                style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="header-link" href="#">Services <i class="fas fa-chevron-down"
+                                    style="font-size: 1rem;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-items" href="./services/hotel.html"> Hotel Booking</a></li>
+                                <li><a class="dropdown-items" href="./services/ticket.html"> Ticket Booking</a></li>
+                                <li><a class="dropdown-items" href="./services/Train.html">Train Booking</a></li>
+                                <li><a class="dropdown-items" href="./services/Packages.html">Tour packages</a></li>
+                              </ul>
+                            </li>
+                            <li><a class="header-link" href="./About.html">About</a></li>
+                            <li><a class="header-link" href="./Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--navbar end-->
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="contact-content">
+            <div class="info-container">
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email: mastertravel@example.com</span>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <span>Phone: +123 456 7890</span>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Location: 123 Street, City</span>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="left-info">
+                    <h1>Contact Us</h1>
+                    <p>At Master Travel, we strive to make every journey smooth and unforgettable. Whether you're planning a vacation, business trip, or adventure, our team is here to assist you. We offer expert guidance, personalized travel plans, and seamless booking services. Your satisfaction is our priority, and we're always ready to help with any inquiries. Contact us today and let’s plan your perfect trip! We’re just a call or message away to make your travel dreams come true.</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Enter your Name" required
+                                    style="width: 260px;background: none;">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Enter your Email" required
+                                    style="width: 260px;background: none;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" placeholder="Enter your Address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Enter your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--contact-->
+    <!--Footer Start-->
+    <footer>
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-container-col">
+                    <h4>About Us</h4>
+                    <ul style="width: 300px;">
+                        <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your
+                            needs and
+                            preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and
+                            memorable
+                            journey. Let us handle the details for you, making every trip unforgettable.</p>
+                    </ul>
+                </div>
+
+                <div class="footer-container-col">
+                    <h4>Quik Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./bolg.html">Blogs</a></li>
+                        <li><a href="./About.html">About Us</a></li>
+                        <li><a href="">Contact Us</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-container-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="./services/hotel.html">Hotel Booking</a></li>
+                        <li><a href="./ticket.html">Ticket Booking</a></li>
+                        <li><a href="./Rail.html"> Rail Booking</a></li>
+                        <li><a href="./Packages.html"> Tour Pakages</a></li>
+                    </ul>
+                </div>
+          
+                <div class="footer-container-col">
+                    <h4>Contact Us</h4>
+                    <ul>   
+                        <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+                        <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                travelmaster@gmail.com</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="footer-container-col">
+                    <h4>Newsletter</h4>
+                    <form action="">
+                        <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+                        <input class="Newsletter-input" type="email" placeholder="Enter Company Email"
+                            class="inputEmail" required>
+                        <input type="submit" value="Submit" class="inputSubmit">
+                    </form>
+                </div>
+            </div>
+            <hr style="margin-top: 30px;">
+            <div class="row">
+                <div class="col">
+                    <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+                </div>
+                <div class="socialIcons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <script>
+        //toogle js code start
+        const navToggler = document.querySelector(".nav-toggler");
+        navToggler.addEventListener("click", navToggle);
+
+        function navToggle() {
+            navToggler.classList.toggle("active");
+            const nav = document.querySelector(".nav");
+            nav.classList.toggle("open");
+            if (nav.classList.contains("open")) {
+                nav.style.maxHeight = nav.scrollHeight + "px";
+            }
+            else {
+                nav.removeAttribute("style");
+            }
+        }
+        //toogle js code end
+
+        //loder start
+        window.addEventListener('load', function () {
+            const loader = document.querySelector('.loader');
+            loader.classList.add('fade-out');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--loader start-->
+  <div class="loader">
+      <div class="ring">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+      </div>
+      <div class="loading-text">Loading...</div>
+  </div>
+  <!--loader end-->
+<!--navbar start-->
+
+  <header class="header">
+    <div class="nav-container">
+      <div class="row align-items-center justify-content-between">
+        <div class="logo">
+          <a href="#"><img class="logo" src="./assest/logo.png" alt="Logo"></a>
+        </div>
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a class="header-link" href="./index.html" class="active"
+                style="color: #f3a93d;border-bottom:2px solid #f3a93d ;">Home</a></li>
+            <li class="dropdown">
+              <a class="header-link" href="./bolg.html">Blog </a>
+            </li>
+            <li class="dropdown">
+              <a class="header-link" href="#">Services <i class="fas fa-chevron-down" style="font-size: 1rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-items" href="./services/hotel.html"> Hotel Booking</a></li>
+                <li><a class="dropdown-items" href="./services/ticket.html"> Ticket Booking</a></li>
+                <li><a class="dropdown-items" href="./services/Train.html">Train Booking</a></li>
+                <li><a class="dropdown-items" href="./services/Packages.html">Tour packages</a></li>
+              </ul>
+            </li>
+            <li><a class="header-link" href="./About.html">About</a></li>
+            <li><a class="header-link" href="./Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="image-section">
+    <img src="./assest/mountain.webp" alt="Mountain View" id="Mountain-image">
+
+    <div class="text-overlay">
+      <h2>"Travel <span style="	color: #f3a93d;
+	text-shadow: 3px 3px 0px black, 3px 3px 0px black, 3px 3px 0px black, 3px 3px 0px black;">Explore And Enjoy</span>
+        Every
+        <pre id="moment">                   Moment"</pre>
+      </h2>
+      <p id="mountain-para" style="color: #fff; text-shadow: none;">We offer more than just trips; we offer
+        unforgettable experiences. Whether you're seeking
+        adventure, relaxation, or cultural exploration, we are here to make your journey seamless and memorable. Let us
+        help you discover the world in a way that suits your style and passions.</p>
+      <button id="mountain-btn">Booking Now ➡</button>
+    </div>
+
+  </section>
+  <main>
+    <div class="main-container">
+      <div class="main-img"><img src="./assest/mountaintravel-img.jpg"></div>
+      <div class="main-para">
+        <p>Hiking some of the most beautiful trails in the world offers a truly transformative experience. From the
+          towering peaks of the Swiss Alps to the lush landscapes of the Inca Trail in Peru, these trails provide an
+          escape into nature's untouched beauty. Each step brings you closer to breathtaking vistas, ancient wonders,
+          and a deep connection with the earth. Whether it’s a challenging ascent or a peaceful walk through serene
+          forests, hiking these iconic trails allows you to experience the world in its rawest and most awe-inspiring
+          form.</p>
+      </div>
+    </div>
+    <!--Travel start -->
+    <div class="travel-container">
+      <div class="travel-content">
+        <img class="travel-img" src="./assest/travel-img1.jpg" alt="Budget Travel">
+        <h3 class="travel-headings">Budget Travel</h3>
+      </div>
+      <div class="travel-content">
+        <img class="travel-img" src="./assest/travel-img2.jpg" alt="Luxury Travel ">
+        <h3 class="travel-headings">Luxury Travel</h3>
+      </div>
+      <div class="travel-content">
+        <img class="travel-img" src="./assest/travel-img3.webp" alt="Adventure Travel">
+        <h3 class="travel-headings">Adventure Travel</h3>
+      </div>
+
+    </div>
+    <!--travel end-->
+    <div class="btn-div">
+      <button class="travel-btn">Booking Now ➡</button>
+    </div>
+    <section style="display: block;">
+     
+      <div class=" pakage" style="display: block;">
+        <img class="pakage-img" src="./assest/umrah-img.jpg" alt="Umrah Package">
+    
+      </div>
+    </section>
+
+    <!--Slider-->
+    <h1 id="slider-heading" style="align-items: center;"> Top Destinations</h1>
+    <section class="slider">
+
+      <div class="slider-container">
+        <div class="slider-wrapper">
+          <button id="prev-slide" class="slide-button material-symbols-rounded"><i class="fa-solid fa-less-than"
+              style="font-size: 1.5rem;"></i>
+
+          </button>
+          <ul class="image-list">
+            <img class="image-item" src="./assest/slide-img1.jpg" alt="Travel Destination" />
+            <img class="image-item" src="./assest/slide-img2.jpg" alt="Travel Destination" />
+            <img class="image-item" src="./assest/slide-img3.jpg" alt="Travel Destination" />
+            <img class="image-item" src="./assest/slid-img4.jpg" alt="Travel Destination" />
+            <img class="image-item" src="./assest/slide-img5.jpg" alt="Travel Destination" />
+            <img class="image-item" src="./assest/slide-img6.jpg" alt="Travel Destination" />
+            <img class="image-item" src="./assest/slide-img7.jpg" alt="Travel Destination" />
+            <img class="image-item" src="./assest/slide-img8.jpg" alt="Travel Destination" />
+            <img class="image-item" src="./assest/slide-img9.avif" alt="Travel Destination" />
+            <img class="image-item" src="./assest/slide-img10.jpg" alt="Travel Destination" />
+
+
+          </ul>
+          <button id="next-slide" class="slide-button material-symbols-rounded">
+            <i class="fa-solid fa-greater-than" style="font-size: 1.5rem;"></i>
+          </button>
+        </div>
+        <div class="slider-scrollbar">
+          <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!--Services start-->
+    <section class="services">
+      <h1 class="services-heading">Our Services</h1>
+      <div class="services-container">
+        <div class="service-card">
+          <img src="./assest/main-hotel-room.jpg" alt="Hotel Booking">
+          <h3>Hotel Booking</h3>
+          <p>Book the best hotels at unbeatable prices and enjoy a truly special stay.</p>
+          <a href="./services/hotel.html">Discover More</a>
+        </div>
+        <div class="service-card">
+          <img src="./assest/main-ticket.webp" alt="Ticket Booking">
+          <h3>Ticket Booking</h3>
+          <p>Book tickets for flights, buses, and more with a smooth and hassle-free process.</p>
+          <a href="./services/ticket.html">Discover More</a>
+        </div>
+        <div class="service-card">
+          <img src="./assest/main-rail.webp" alt="Rail Booking">
+          <h3>Rail Booking</h3>
+          <p>Secure your Train reservations effortlessly with our efficient booking service.</p>
+          <a href="./services/Rail.html">Discover More</a>
+        </div>
+        <div class="service-card">
+          <img src="./assest/travel-tour-package.jpg" alt="Visa Assistance">
+          <h3>Tour Packages</h3>
+          <p>Explore exciting tour packages designed to make your trips unforgettable.</p>
+          <a href="./services/Packages.html">Discover More</a>
+        </div>
+      </div>
+    </section>
+    <!--services end-->
+    <section>
+      <div class="step-container">
+        <div class="steps">
+          <div class="step-item">
+
+            <div>
+              <h1>Book Your New Trip in 4 Steps </h1>
+              <h2> <i class="fas fa-map-marker-alt"></i>Choose Your Destination & Dates</h2>
+              <p>Research destinations, check availability, and select the best travel dates.</p>
+            </div>
+          </div>
+          <div class="step-item">
+
+            <div>
+              <h2><i class="fas fa-credit-card"></i> Book Flights and Accommodations:</h2>
+              <p>Compare flight options and book your stay based on your preferences and budget.</p>
+            </div>
+          </div>
+          <div class="step-item">
+
+            <div>
+              <h2><i class="fas fa-plane-departure"></i>Plan Activities and Transportation:</h2>
+              <p>Organize tours, activities, and local transportation for a smooth travel experience.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div>
+              <h2><i class="fas fa-suitcase"></i> Pack Your Essentials</h2>
+              <p>Pack essential clothes, documents, and gear for a smooth trip..</p>
+            </div>
+          </div>
+        </div>
+        <div class="step-image">
+          <img src="./assest/steps-img.webp" alt="Travel Image">
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="icons">
+        <div class="icon adventure">
+          <i class="fas fa-compass main-icon" style="color: #f3a93d;"></i>
+          <p>Adventure</p>
+        </div>
+        <div class="icon safety">
+          <i class="fas fa-shield-alt main-icon" style="color: #f3a93d;"></i>
+          <p>Safety</p>
+        </div>
+        <div class="icon memories">
+          <i class="fas fa-camera main-icon" style="color: #f3a93d;"></i>
+          <p>Memories</p>
+        </div>
+        <div class="icon experiences">
+          <i class="fas fa-map-marker-alt main-icon" style="color: #f3a93d;"></i>
+          <p>Experiences</p>
+        </div>
+      </div>
+    </section>
+
+    </section>
+    <section class="reviews-section">
+      <h2 id="slider-heading" style="align-items: center;">Clients Reviews</h2>
+      <div class="reviews-container">
+        <!-- Review 1 -->
+        <div class="review">
+          <div class="reviewer-info">
+            <p><i class="fa-solid fa-user" class="reviewer-icon" style="font-size: 2rem;color: #f3a93d;"></i></p>
+            <h3 class="review-heading" style="margin-top: 10px;margin-bottom: 0%;">John Carter</h3>
+          </div>
+          <div class="review-rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9734;</span>
+          </div>
+          <p class="review-text"> "The best travel agency I’ve ever worked with! Highly recommended!"</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review">
+          <div class="reviewer-info">
+            <p><i class="fa-solid fa-user" class="reviewer-icon" style="font-size: 2rem;color: #f3a93d;"></i></p>
+            <h3 class="review-heading" style="margin-top: 10px;margin-bottom: 0%;">Jane Smith</h3>
+          </div>
+          <div class="review-rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+          <p class="review-text">"Amazing service! They helped me plan my honeymoon to Bali. It was perfect!"</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review">
+          <div class="reviewer-info">
+            <p><i class="fa-solid fa-user" class="reviewer-icon" style="font-size: 2rem;color: #f3a93d;"></i></p>
+            <h3 class="review-heading" style="margin-top: 10px;margin-bottom: 0%;">Sarah Johnson</h3>
+          </div>
+          <div class="review-rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9734;</span>
+          </div>
+          <p class="review-text">"Fantastic experience. My trip to Europe was unforgettable, thanks to this agency!"</p>
+        </div>
+        <!-- Review 4 -->
+        <div class="review">
+          <div class="reviewer-info">
+            <p><i class="fa-solid fa-user" class="reviewer-icon" style="font-size: 2rem;color: #f3a93d;"></i></p>
+            <h3 class="review-heading" style="margin-top: 10px;margin-bottom: 0%;"> Ahmed Khan</h3>
+          </div>
+          <div class="review-rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+          <p class="review-text">"A dream vacation came true! The entire trip was meticulously planned and executed.
+            Will definitely book with them again!"</p>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review">
+          <div class="reviewer-info">
+            <p><i class="fa-solid fa-user" class="reviewer-icon" style="font-size: 2rem;color: #f3a93d;"></i></p>
+            <h3 class="review-heading" style="margin-top: 10px;margin-bottom: 0%;">Anna Wilson</h3>
+          </div>
+          <div class="review-rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+          <p class="review-text"> "The team provided excellent service from start to finish. I had an unforgettable
+            experience with my family trip to Paris."</p>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="review">
+          <div class="reviewer-info">
+            <p><i class="fa-solid fa-user" class="reviewer-icon" style="font-size: 2rem;color: #f3a93d;"></i></p>
+            <h3 class="review-heading" style="margin-top: 10px;margin-bottom: 0%;">Ayesha Malik</h3>
+          </div>
+          <div class="review-rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9734;</span>
+          </div>
+          <p class="review-text">"Best travel experience ever! From flight bookings to hotel arrangements, everything
+            was smooth and hassle-free."</p>
+        </div>
+      </div>
+
+
+    </section>
+
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./bolg.html">Blogs</a></li>
+            <li><a href="./About.html">About Us</a></li>
+            <li><a href="./Contact.html">Contact Us</a></li>
+       
+          </ul>
+        </div>
+
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="./services/hotel.html">Hotel Booking</a></li>
+            <li><a href="./ticket.html">Ticket Booking</a></li>
+            <li><a href="./services/Train.html">Train Booking</a></li>
+            <li><a href="./Packages.html"> Tour Pakages</a></li>
+          </ul>
+        </div>
+ 
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

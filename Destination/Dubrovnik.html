@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubrovnik</title>
+    <link rel="stylesheet" href="./destination.css">
+</head>
+<body>
+      <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+</div>
+<!--loader end-->
+    <!--navbar start-->
+    <header class="header">
+        <div class="nav-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a class="header-link" href="../bolg.html"    style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="header-link" href="#">Services <i class="fas fa-chevron-down"
+                                    style="font-size: 1rem;"></i></a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+                                  </ul>
+                              </li>
+                              <li><a class="header-link" href="../About.html">About</a></li>
+                              <li><a class="header-link" href="../Contact.html">Contact</a></li>
+                          </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+  <!--navbar end-->
+<!-- Dubrovnik Start -->
+<div class="hero-image">
+    <img class="main-img" src="../assest/Dubrovnik.jpg" alt="Dubrovnik Old Town">
+  </div>
+  <div class="heading">Dubrovnik</div>
+  <div class="content">
+  
+    <h2 class="scroll-reveal">About Dubrovnik</h2>
+    <p class="scroll-reveal">
+        Known as the "Pearl of the Adriatic," Dubrovnik is a stunning coastal city in Croatia, renowned for its well-preserved medieval architecture, crystal-clear waters, and rich history. Encircled by ancient city walls, its Old Town is a UNESCO World Heritage site, offering a charming mix of cobblestone streets, historic landmarks, and breathtaking views of the Adriatic Sea.
+    </p>
+  
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+        <li><strong>City Walls</strong> - Walk along the iconic city walls for panoramic views of the Old Town and the Adriatic Sea.</li>
+        <li><strong>Stradun</strong> - The main street of Dubrovnik, lined with historic buildings, shops, and restaurants.</li>
+        <li><strong>Rector’s Palace</strong> - A Gothic-Renaissance palace that houses the Cultural History Museum.</li>
+        <li><strong>Lovrijenac Fortress</strong> - A historic fortress offering stunning views and a connection to Dubrovnik’s defense history.</li>
+        <li><strong>Lokrum Island</strong> - A lush, serene island just a short ferry ride away, perfect for nature walks and swimming.</li>
+        <li><strong>Mount Srđ</strong> - Take a cable car to the top for breathtaking views of Dubrovnik and the surrounding coast.</li>
+        <li><strong>Banje Beach</strong> - A picturesque beach near the Old Town, perfect for sunbathing and water activities.</li>
+    </ul>
+  
+    <img class="image scroll-reveal" src="../assest/Dubrovnik2.avif" alt="Dubrovnik City Walls" class="full-width-image">
+  
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+        Let us craft your perfect Dubrovnik experience. From exploring its historic landmarks to relaxing on its pristine beaches, we offer tailored itineraries that suit every traveler. Enjoy guided tours, luxurious accommodations, and curated experiences for an unforgettable visit to Dubrovnik.
+    </p>
+  
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+        The best time to visit Dubrovnik is during spring (April to June) and early autumn (September to October), when the weather is pleasant, and the crowds are smaller. The summer months (July and August) are the peak tourist season, offering vibrant energy but also higher prices and crowds. Winter (November to March) is quieter, with cooler weather and fewer attractions open.
+    </p>
+  
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+        Dubrovnik’s cuisine is influenced by Mediterranean and Croatian traditions, featuring fresh seafood, olive oil, and local herbs. Must-try dishes include <em>black risotto</em>, <em>pasticada</em> (braised beef), and <em>dubrovacka rozata</em> (a local dessert). The city is also known for its wine culture, with excellent local varieties like Malvasija and Plavac Mali.
+    </p>
+  
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+        - Explore early in the morning or late in the evening to avoid peak tourist crowds.<br>
+        - Pack comfortable shoes for walking the cobblestone streets and city walls.<br>
+        - Take a day trip to nearby islands or the Elaphiti archipelago for a unique perspective.<br>
+        - Try local restaurants away from the main tourist spots for authentic cuisine and better prices.
+    </p>
+  
+    <div class="date-picker scroll-reveal">
+        <input type="date" id="travelDate" placeholder="Select your travel date">
+        <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+      <a href="../services/ticket.html">Plan Your Trip to Dubrovnik Now</a>
+    </div>
+  </div>
+  <!-- End -->
+  
+   <!--Footer Start-->
+   <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+       
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+  <script>
+    //toogle js code start
+const navToggler = document.querySelector(".nav-toggler");
+navToggler.addEventListener("click", navToggle);
+
+function navToggle() {
+navToggler.classList.toggle("active");
+const nav = document.querySelector(".nav");
+nav.classList.toggle("open");
+if(nav.classList.contains("open")){
+nav.style.maxHeight = nav.scrollHeight + "px";
+}
+else{
+nav.removeAttribute("style");
+}
+} 
+//toogle js code end
+    function checkAvailability() {
+        const dateInput = document.getElementById("travelDate");
+        const selectedDate = dateInput.value;
+        
+        if (selectedDate) {
+            dateInput.disabled = true;
+
+            alert(`You selected: ${selectedDate}. Availability has been checked!`);
+        } else {
+            alert("Please select a date.");
+        }
+    }
+       //loader js
+       window.addEventListener('load', function() {
+    const loader = document.querySelector('.loader');
+    loader.classList.add('fade-out');
+});
+
+//Overall animation start
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+    });
+});
+window.dispatchEvent(new Event("scroll"));
+
+</script>
+
+</body>
+</html>

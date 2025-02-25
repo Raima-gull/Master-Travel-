@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malam Jabba</title>
+    <link rel="stylesheet" href="./destination.css">
+</head>
+
+<body>
+  <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+</div>
+<!--loader end-->
+    <!--navbar start-->
+    <header class="header">
+        <div class="nav-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a class="header-link" href="../bolg.html"   style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="header-link" href="#">Services <i class="fas fa-chevron-down"
+                                    style="font-size: 1rem;"></i></a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                                      <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+                                  </ul>
+                              </li>
+                              <li><a class="header-link" href="../About.html">About</a></li>
+                              <li><a class="header-link" href="../Contact.html">Contact</a></li>
+                          </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--navbar end-->
+<!-- Malham Jabba Start -->
+<div class="hero-image">
+    <img class="main-img" src="../assest/malam jabba.jpg" alt="Malham Jabba Scenery" style="height: 70vh;">
+</div>
+<div class="heading">Malham Jabba</div>
+<div class="content">
+
+    <h2  class="scroll-reveal">About Malham Jabba</h2>
+    <p  class="scroll-reveal">
+        Malham Jabba is a picturesque hill station located in the Swat Valley of Khyber Pakhtunkhwa, Pakistan. Known for its breathtaking landscapes, lush green meadows, and snow-capped mountains, it is a popular tourist destination for adventure seekers and nature lovers. Malham Jabba is famous for its skiing resorts in winter, as well as hiking trails and serene views throughout the year.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul  class="scroll-reveal">
+        <li><strong>Malham Jabba Ski Resort</strong> - One of the few skiing resorts in Pakistan, attracting both local and international skiers.</li>
+        <li><strong>Swat River</strong> - The river that winds through the valley offers beautiful views and a perfect backdrop for photography.</li>
+        <li><strong>Shingrai Waterfall</strong> - A hidden gem, this waterfall is known for its crystal-clear water and surrounding natural beauty.</li>
+        <li><strong>Ushu Forest</strong> - An enchanting forest with dense trees and diverse wildlife, ideal for trekking and nature walks.</li>
+        <li><strong>Fizagat Park</strong> - A peaceful park near Malham Jabba, perfect for a relaxing day out with family and friends.</li>
+        <li><strong>Historical Buddhist Monuments</strong> - Discover ancient Buddhist remnants in the nearby regions of Udegram and Butkara Stupa.</li>
+    </ul>
+
+    <img class="image scroll-reveal" src="../assest/malam jabba2.webp" alt="Malham Jabba Views" class="full-width-image">
+
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+        Our travel packages to Malham Jabba provide the perfect opportunity to explore this scenic destination. Whether you’re seeking adventure on the slopes, relaxing by the river, or hiking in the mountains, we offer tailored itineraries with comfortable accommodations and guided tours. Let us help you experience the beauty and tranquility of this incredible location.
+    </p>
+
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+        The best time to visit Malham Jabba is during the summer months (May to September), when the weather is pleasant for hiking, sightseeing, and outdoor activities. For skiing enthusiasts, the winter months (December to February) are ideal for enjoying the slopes and snowfall.
+    </p>
+
+    <h2 class="scroll-reveal">Local Culture and Cuisine</h2>
+    <p class="scroll-reveal">
+        Malham Jabba’s culture is deeply rooted in Pashtun traditions. The area is known for its warm hospitality and traditional Pashto cuisine. Popular dishes to try include <em>chapli kebabs</em>, <em>peshawari naan</em>, and <em>sewai</em>. Enjoy the local flavors while experiencing the welcoming atmosphere of the region.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+        - Pack warm clothing if visiting in winter, as temperatures can drop significantly.<br>
+        - It’s advisable to travel with a local guide for trekking and exploring the area.<br>
+        - Keep your camera ready to capture the stunning landscapes and scenic views.<br>
+        - Be sure to carry enough water and snacks during hikes, as some areas can be remote.<br>
+        - Respect the local customs and traditions when interacting with locals.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+        <input type="date" id="travelDate" placeholder="Select your travel date">
+        <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta  scroll-reveal">
+        <a href="../services/ticket.html">Plan Your Trip to Malham Jabba Now</a>
+    </div>
+</div>
+<!-- Malham Jabba End -->
+
+  
+
+  
+         <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+     
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+       
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+ 
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+
+    
+
+        <script>
+            //toogle js code start
+ const navToggler = document.querySelector(".nav-toggler");
+ navToggler.addEventListener("click", navToggle);
+
+ function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+    	nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+    	nav.removeAttribute("style");
+    }
+ } 
+//toogle js code end
+            function checkAvailability() {
+                const dateInput = document.getElementById("travelDate");
+                const selectedDate = dateInput.value;
+                
+                if (selectedDate) {
+                    dateInput.disabled = true;
+                    alert(`You selected: ${selectedDate}. Availability has been checked!`);
+                } else {
+                    alert("Please select a date.");
+                }
+            }
+               //loader js
+    window.addEventListener('load', function() {
+    const loader = document.querySelector('.loader');
+    loader.classList.add('fade-out');
+});
+
+
+
+//Overall animation start
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+    });
+});
+window.dispatchEvent(new Event("scroll"));
+
+        </script>
+
+</body>
+
+
+</html>

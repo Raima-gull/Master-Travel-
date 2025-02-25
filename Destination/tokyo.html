@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokyo</title>
+  <link rel="stylesheet" href="./destination.css">
+</head>
+
+<body> <!--loader start-->
+  <div class="loader">
+    <div class="ring">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+  </div>
+  <!--loader end-->
+
+  <!--navbar start-->
+  <header class="header">
+    <div class="nav-container">
+      <div class="row align-items-center justify-content-between">
+        <div class="logo">
+          <a href="#"><img class="logo" src="../assest/logo.png" alt="Logo"></a>
+        </div>
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a class="header-link" href="../index.html" class="active">Home</a></li>
+            <li class="dropdown">
+              <a class="header-link" href="../bolg.html" style="color: #f3a93d;border-bottom:2px solid #f3a93d">Blog
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class="header-link" href="#">Services <i class="fas fa-chevron-down" style="font-size: 1rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-items" href="../services/hotel.html"> Hotel Booking</a></li>
+                <li><a class="dropdown-items" href="../services/ticket.html"> Ticket Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Train.html">Train Booking</a></li>
+                <li><a class="dropdown-items" href="../services/Packages.html">Tour packages</a></li>
+              </ul>
+            </li>
+            <li><a class="header-link" href="../About.html">About</a></li>
+            <li><a class="header-link" href="../Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--navbar end-->
+  <!--Tokyo start-->
+  <!-- tokyo start -->
+
+  <div class="hero-image">
+    <img class="main-img" src="../assest/tokyo.jpeg" alt="Tokyo Skyline">
+  </div>
+  <div class="heading">Tokyo</div>
+  <div class="content">
+
+    <h2  class="scroll-reveal">About Tokyo</h2>
+    <p class="scroll-reveal">
+      Tokyo, Japan's bustling capital, is a vibrant metropolis where tradition meets cutting-edge modernity. From
+      ancient temples and serene gardens to futuristic skyscrapers and neon-lit streets, Tokyo offers a unique and
+      dynamic travel experience. Whether you're exploring historic districts like Asakusa, shopping in Ginza, or
+      experiencing the energetic nightlife of Shibuya, Tokyo is a city that never fails to amaze.
+    </p>
+
+    <h2 class="scroll-reveal">Top Attractions</h2>
+    <ul class="scroll-reveal">
+      <li><strong>Tokyo Skytree</strong> - An iconic broadcasting tower offering breathtaking panoramic views of the
+        city.</li>
+      <li><strong>Senso-ji Temple</strong> - Tokyo’s oldest and most famous Buddhist temple, located in the historic
+        Asakusa district.</li>
+      <li><strong>Shibuya Crossing</strong> - One of the world’s busiest pedestrian crossings, a symbol of Tokyo’s
+        energetic spirit.</li>
+      <li><strong>Imperial Palace</strong> - The residence of Japan’s Emperor, surrounded by lush gardens and historic
+        architecture.</li>
+      <li><strong>Meiji Shrine</strong> - A serene Shinto shrine dedicated to Emperor Meiji and Empress Shoken, nestled
+        within a peaceful forest.
+      </li>
+      <li><strong>Odaiba</strong> - A futuristic island featuring attractions like teamLab Borderless, Rainbow Bridge,
+        and shopping malls.</li>
+      <li><strong>Tsukiji Outer Market</strong> - A haven for food lovers, offering fresh sushi, street food, and
+        authentic Japanese ingredients.</li>
+    </ul>
+
+
+    <img class="image scroll-reveal" src="../assest/tokyo2.webp" alt="Tokyo View" class="full-width-image">
+
+    <h2 class="scroll-reveal">Why Choose Us?</h2>
+    <p class="scroll-reveal">
+      Tokyo offers an unforgettable mix of culture, cuisine, and innovation. Whether you're a history buff exploring
+      ancient temples, a tech enthusiast marveling at Akihabara’s electronics, or a foodie indulging in sushi and ramen,
+      our travel agency ensures you make the most of your Tokyo adventure. We provide personalized itineraries, local
+      guides, and insider tips to create a seamless travel experience tailored to your interests.
+    </p>
+
+    <h2 class="scroll-reveal">Best Time to Visit</h2>
+    <p class="scroll-reveal">
+      The best times to visit Tokyo are spring (March to May) and autumn (September to November). During spring, the
+      city comes alive with cherry blossoms, creating breathtaking views in parks like Ueno and Shinjuku Gyoen. Autumn
+      brings cooler weather and vibrant fall foliage. Summer (June to August) is great for festivals but can be hot and
+      humid, while winter (December to February) offers clear skies and fewer crowds.
+    </p>
+
+    <h2 class="scroll-reveal">Local Cuisine</h2>
+    <p class="scroll-reveal">
+      Tokyo is a culinary paradise, boasting everything from Michelin-starred restaurants to humble street food stalls.
+      Don’t miss delicacies like sushi at Tsukiji, ramen in Ikebukuro, tempura in Asakusa, and yakitori in Omoide
+      Yokocho. For dessert, try matcha-flavored treats or fluffy Japanese pancakes. Tokyo is also known for its bustling
+      izakayas and high-quality sake.
+    </p>
+
+    <h2 class="scroll-reveal">Travel Tips</h2>
+    <p class="scroll-reveal">
+      - Purchase a prepaid Suica or Pasmo card for convenient travel on Tokyo’s efficient public transportation
+      system.<br>
+      - Learn basic Japanese phrases—many locals appreciate the effort and it can enhance your experience.<br>
+      - Be mindful of etiquette, such as standing on the correct side of escalators and being quiet on trains.<br>
+      - Visit popular attractions early in the morning to avoid crowds.
+    </p>
+
+    <div class="date-picker scroll-reveal">
+      <input type="date" id="travelDate" placeholder="Select your travel date">
+      <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <div class="cta scroll-reveal">
+      <a href="../services/ticket.html">Plan Your Trip to Tokyo Now</a>
+    </div>
+  </div>
+
+  <!-- End -->
+
+  <!--end -->
+  <!--Tokyo end-->
+  <!--Footer Start-->
+  <footer>
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-container-col">
+          <h4>About Us</h4>
+          <ul style="width: 300px;">
+            <p id="footer-para">Our travel agency offers personalized travel packages, catering to all your needs and
+              preferences. From flight bookings to hotel stays and guided tours, we ensure a smooth and memorable
+              journey. Let us handle the details for you, making every trip unforgettable.</p>
+          </ul>
+        </div>
+
+        <div class="footer-container-col">
+          <h4>Quik Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bolg.html">Blogs</a></li>
+            <li><a href="../About.html">About Us</a></li>
+            <li><a href="../Contact.html">Contact Us</a></li>
+
+          </ul>
+        </div>
+
+
+        <div class="footer-container-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services/hotel.html">Hotel Booking</a></li>
+            <li><a href="../services/ticket.html">Ticket Booking</a></li>
+            <li><a href="../services/Train.html">Train Booking</a></li>
+            <li><a href="../services/Packages.html"> Tour Pakages</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +123 456 7890</a></li>
+            <li><a href="mailto:travelmaster@gmail.com"><i class="fa-solid fa-envelope"></i> travelmaster@gmail.com</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="footer-container-col">
+          <h4>Newsletter</h4>
+          <form action="">
+            <input class="Newsletter-input" type="text" placeholder="Your Name" class="inputName" required>
+            <input class="Newsletter-input" type="email" placeholder="Enter Company Email" class="inputEmail" required>
+            <input type="submit" value="Submit" class="inputSubmit">
+          </form>
+        </div>
+      </div>
+      <hr style="margin-top: 30px;">
+      <div class="row">
+        <div class="col">
+          <p style="padding: 20px;">&#169; 2022 Finegap. All Rights Reserved.</p>
+        </div>
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+
+
+
+  <script>
+    //toogle js code start
+    const navToggler = document.querySelector(".nav-toggler");
+    navToggler.addEventListener("click", navToggle);
+
+    function navToggle() {
+      navToggler.classList.toggle("active");
+      const nav = document.querySelector(".nav");
+      nav.classList.toggle("open");
+      if (nav.classList.contains("open")) {
+        nav.style.maxHeight = nav.scrollHeight + "px";
+      }
+      else {
+        nav.removeAttribute("style");
+      }
+    }
+    //toogle js code end
+    function checkAvailability() {
+      const dateInput = document.getElementById("travelDate");
+      const selectedDate = dateInput.value;
+
+      if (selectedDate) {
+        dateInput.disabled = true;
+
+        alert(`You selected: ${selectedDate}. Availability has been checked!`);
+      } else {
+        alert("Please select a date.");
+      }
+    }
+    //loader js
+    window.addEventListener('load', function () {
+      const loader = document.querySelector('.loader');
+      loader.classList.add('fade-out');
+    });
+
+
+
+    //Overall animation start
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".scroll-reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("active");
+      });
+    });
+    window.dispatchEvent(new Event("scroll"));
+
+  </script>
+
+</body>
+
+
+</html>
