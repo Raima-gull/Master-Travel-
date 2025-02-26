@@ -491,7 +491,7 @@ padding: 0;
 }
 
 /* Main container */
-.main-container {
+/* .main-container {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -549,6 +549,76 @@ padding: 0;
 		padding-left: 20px;
 		padding-top: 50px;
 	}
+} */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+    margin: 100px auto;
+}
+
+.main-img img {
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+    opacity: 0;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0);
+    transition: transform 0.5s ease;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.main-img img:hover {
+    transform: scale(1.02);
+}
+
+.main-para {
+    width: 80%;
+    padding: 20px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-weight: normal;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.658);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        flex-wrap: nowrap;
+    }
+    .main-img,
+    .main-para {
+        width: 50%;
+    }
+    .main-para {
+        padding-left: 20px;
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-img img {
+        width: 100%;
+        height: auto;
+    }
+    .main-para {
+        width: 100%;
+        padding:30px 10px 10px 10px;
+        font-size: 1.1rem;
+    }
 }
 
 /*travel css start*/
@@ -1128,7 +1198,6 @@ padding: 0;
 	animation-delay: 2.2s;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
 	.review {
 		width: 45%;
@@ -1261,58 +1330,148 @@ padding: 0;
 		max-height: 300px;
 	}
 }
+@media (max-width: 400px) {
+    .step-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .steps {
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .steps h2 {
+        font-size: 18px;
+    }
+
+    .steps h1 {
+        font-size: 22px;
+        padding: 0 0 20px 20px;
+    }
+
+    .steps p {
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    .step-item {
+        margin: 20px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .step-item i {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .step-image {
+        height: auto;
+        padding: 10px;
+    }
+
+    .step-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
 .icons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 40px;
-	gap: 40px;
-	border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+    border-radius: 20px;
+    flex-wrap: wrap;
 }
 
 .icon {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 40px;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	background-color: #fff;
-	transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
 }
 
 .icon:hover {
-	transform: scale(1.1);
-	background-color: #000;
-
+    transform: scale(1.1);
+    background-color: #000;
 }
 
 .icon i {
-	font-size: 36px;
-	margin-bottom: 10px;
-	color: #333;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.icon i :hover {
-	color: #f3a93d;
+.icon i:hover {
+    color: #f3a93d;
 }
 
 .icon p {
-	font-size: 1.8rem;
-	font-weight: bold;
-	color: #666;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #666;
 }
 
-.icons p:hover {
-	color: #fff;
+.icon:hover p{
+    color: #fff;
 }
 
 .main-icon {
-	color: #f3a93d;
+    color: #f3a93d;
 }
 
+@media (max-width: 1200px) {
+    .icon {
+        padding: 30px;
+    }
+    
+    .icon i {
+        font-size: 30px;
+    }
+    
+    .icon p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .icon {
+        padding: 20px;
+    }
+    
+    .icon i {
+        font-size: 24px;
+    }
+    
+    .icon p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon {
+        padding: 15px;
+    }
+    
+    .icon i {
+        font-size: 18px;
+    }
+    
+    .icon p {
+        font-size: 1.2rem;
+    }
+}
 
 /* Footer css start */
 footer {
